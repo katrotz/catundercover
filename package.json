@@ -1,0 +1,51 @@
+{
+  "name": "catundercover",
+  "version": "0.1.0",
+  "description": "Catundercover portfolio application",
+  "main": "src/app/index.js",
+  "bin": {},
+  "scripts": {
+    "postinstall": "jspm install",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "jspm bundle src/app/index --inject",
+    "start": "./bin/server"
+  },
+  "repository": {
+    "type": "git",
+    "url": "ssh://git@github.com:katrotz/catundercover.git"
+  },
+  "keywords": [
+    "Angular2",
+    "Frontend",
+    "catundercover",
+    "portfolio"
+  ],
+  "owner": [
+    "Vyacheslav Cotruta <katrotz@gmail.com> (http://katrotz.space)"
+  ],
+  "license": "MIT",
+  "devDependencies": {
+    "jspm": "^0.16.34",
+    "live-server": "^1.0.0"
+  },
+  "jspm": {
+    "directories": {
+      "baseURL": "src",
+      "packages": "src/vendor"
+    },
+    "configFile": "src/config.system.js",
+    "dependencies": {
+      "angular2": "npm:angular2@^2.0.0-beta.17",
+      "css": "github:systemjs/plugin-css@^0.1.21",
+      "json": "github:systemjs/plugin-json@^0.1.2",
+      "less": "github:katrotz/jspm-less-plugin@^0.0.11",
+      "text": "github:systemjs/plugin-text@^0.0.8"
+    },
+    "devDependencies": {
+      "babel": "npm:babel-core@^5.8.24",
+      "babel-runtime": "npm:babel-runtime@^5.8.24",
+      "core-js": "npm:core-js@^1.1.4"
+    }
+  },
+  "dependencies": {}
+}
