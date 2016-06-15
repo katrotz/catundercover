@@ -2,9 +2,9 @@
     'use strict';
 
     Promise.all([
-        System.import('app/index')
+        System.import('catundercover')
     ]).then(function(imports) {
-            imports[0].bootstrap();
+            imports[0].run();
         })
         .catch(function(e) {
             console.error(e);

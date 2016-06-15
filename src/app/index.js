@@ -1,24 +1,21 @@
 'use strict';
 
-import {Component, View, enableProdMode, ViewEncapsulation} from 'angular2/core';
-import {bootstrap as ngBootstrapBrowser} from 'angular2/platform/browser';
-import mainStyles from './less/main.less!';
+import { Component, View, enableProdMode, ViewEncapsulation } from '@angular/core';
+import { bootstrap as ngBootstrapBrowser } from '@angular/platform-browser-dynamic'
+import { provideStore } from '@ngrx/store';
 
-class CatUnderCoverPortfolio{
-    static get annotations() {
-        return [
-            new Component({
-                selector: 'cat-under-cover',
-                directives: [],
-                template: `<h1>Up and running</h1>`,
-                styles: [mainStyles],
-                encapsulation: ViewEncapsulation.None
-            })
-        ];
-    }
-}
+import { reducers, state } from './reducers/index';
+import APP_ROUTER_PROVIDERS from './routes/index';
+import CatUndercoverComponent from './components/catundercover/catundercover.component';
 
-export function bootstrap() {
+export function run() {
     enableProdMode();
-    return ngBootstrapBrowser(CatUnderCoverPortfolio);
+
+    return ngBootstrapBrowser(
+        CatUndercoverComponent,
+        [
+            APP_ROUTER_PROVIDERS,
+            provideStore(reducers, state)
+        ]
+    );
 }
