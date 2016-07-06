@@ -1,0 +1,14 @@
+<footer>
+    <md-toolbar class="footer">
+        <span class="footer__social">
+            <a href="{{sNetwork.url}}" title="{{sNetwork.title}}" class="footer__social_item" *ngFor="let sNetwork of socialNetworks">
+                <span class="footer__social_item_icon {{sNetwork.class}}"></span>
+            </a>
+        </span>
+
+        <span class="footer__contact">
+            <span class="msg">INTERESTED IN COLLABORATION?</span>
+            <span class="mailto"><a href="mailto:corinaciripitca@gmail.com">DROP ME A LINE</a></span>
+        </span>
+    </md-toolbar>
+</footer>

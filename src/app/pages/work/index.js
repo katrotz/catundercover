@@ -1,14 +1,17 @@
 'use strict';
 
-import { Component, ViewEncapsulation } from '@angular/core';
+import { Component } from '@angular/core';
+
+import PortfolioComponent from './../../components/portfolio/portfolio.component';
 
 export default class WorkIndexPage {
     static get annotations() {
         return [
             new Component({
-                template: `
-                    <h1>Work</h1>
-                `
+                directives: [
+                    PortfolioComponent
+                ],
+                template: `<portfolio></portfolio>`
             })
         ];
     }

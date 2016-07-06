@@ -20,6 +20,12 @@ SystemJS.config({
       "meta": {
         "*.js": {
           "loader": "plugin-babel"
+        },
+        "*.less": {
+          "loader": "less"
+        },
+        "*.html": {
+          "loader": "text"
         }
       }
     }
@@ -40,6 +46,11 @@ SystemJS.config({
     "@angular/platform-browser": "npm:@angular/platform-browser@2.0.0-rc.2",
     "@angular/platform-browser-dynamic": "npm:@angular/platform-browser-dynamic@2.0.0-rc.2",
     "@angular/router": "npm:@angular/router@3.0.0-alpha.4",
+    "@angular2-material/button": "npm:@angular2-material/button@2.0.0-alpha.5-2",
+    "@angular2-material/card": "npm:@angular2-material/card@2.0.0-alpha.5-2",
+    "@angular2-material/core": "npm:@angular2-material/core@2.0.0-alpha.5-2",
+    "@angular2-material/grid-list": "npm:@angular2-material/grid-list@2.0.0-alpha.5-2",
+    "@angular2-material/toolbar": "npm:@angular2-material/toolbar@2.0.0-alpha.5-2",
     "@ngrx/core": "npm:@ngrx/core@1.0.0",
     "@ngrx/store": "npm:@ngrx/store@2.0.0",
     "assert": "github:jspm/nodelibs-assert@0.2.0-alpha",
@@ -54,6 +65,8 @@ SystemJS.config({
     "graceful-fs": "npm:graceful-fs@4.1.4",
     "image-size": "npm:image-size@0.5.0",
     "json": "github:systemjs/plugin-json@0.1.2",
+    "less": "github:katrotz/jspm-less-plugin@0.0.11",
+    "lodash": "npm:lodash@4.13.1",
     "mime": "npm:mime@1.3.4",
     "mkdirp": "npm:mkdirp@0.5.1",
     "path": "github:jspm/nodelibs-path@0.2.0-alpha",
@@ -132,6 +145,12 @@ SystemJS.config({
       "map": {
         "querystring": "npm:querystring@0.2.0",
         "punycode": "npm:punycode@1.3.2"
+      }
+    },
+    "github:katrotz/jspm-less-plugin@0.0.11": {
+      "map": {
+        "npm:less": "npm:less@2.7.1",
+        "npm:less/lib/less-browser/index": "npm:less@2.7.1/lib/less-browser/index"
       }
     }
   }

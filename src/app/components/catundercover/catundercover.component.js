@@ -3,7 +3,9 @@
 import { Component, ViewEncapsulation } from '@angular/core';
 import { ROUTER_DIRECTIVES } from '@angular/router';
 
-import LogoComponent from './../logo/logo.component';
+import NavbarComponent from './../navbar/navbar.component';
+import FooterComponent from './../footer/footer.component';
+import componentStyles from './catundercover.component.less!';
 
 export default class CatUndercoverComponent{
     static get annotations() {
@@ -11,18 +13,17 @@ export default class CatUndercoverComponent{
             new Component({
                 selector: 'catundercover',
                 template: `
-                    <h1>Up and running</h1>
-                    <logo></logo>
-                    <nav>
-                      <a [routerLink]="['/']">Work</a>
-                      <a [routerLink]="['/about']">About</a>
-                      <a [routerLink]="['/moodboard']">Moodboard</a>
-                      <a [routerLink]="['/thoughts']">Thoughts</a>
-                    </nav>
+                    <section class="hr hr--orange"></section>
+                    <navbar></navbar>
                     <router-outlet></router-outlet>
+                    <footer></footer>
                 `,
-                styles: [],
-                directives: [ROUTER_DIRECTIVES, LogoComponent],
+                styles: [componentStyles],
+                directives: [
+                    ROUTER_DIRECTIVES,
+                    NavbarComponent,
+                    FooterComponent
+                ],
                 encapsulation: ViewEncapsulation.None
             })
         ];

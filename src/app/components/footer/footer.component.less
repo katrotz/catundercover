@@ -1,0 +1,91 @@
+footer {
+  .footer {
+    background-color: transparent;
+
+    md-toolbar-row {
+      justify-content: space-between;
+
+      .footer__social {
+        display: flex;
+        flex-direction: row;
+        margin-left: 1em;
+
+        .footer__social_item {
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          width: 1em;
+          height: 1em;
+          margin-right: 1em;
+
+          .footer__social_item_icon {
+            width: 100%;
+            height: 100%;
+            background-size: cover;
+
+            &.instagram {
+              .image-2x('/assets/images/social-networks/instagram-logo.png', 100%, 100%);
+
+              &:hover {
+                .image-2x('/assets/images/social-networks/instagram-logo-hover.png', 100%, 100%);
+              }
+            }
+
+            &.linkedin {
+              .image-2x('/assets/images/social-networks/linkedin-button.png', 100%, 100%);
+
+              &:hover {
+                .image-2x('/assets/images/social-networks/linkedin-button-hover.png', 100%, 100%);
+              }
+            }
+
+            &.pinterest {
+              .image-2x('/assets/images/social-networks/pinterest.png', 100%, 100%);
+
+              &:hover {
+                .image-2x('/assets/images/social-networks/pinterest-hover.png', 100%, 100%);
+              }
+            }
+
+            &.facebook {
+              .image-2x('/assets/images/social-networks/facebook-logo-button.png', 100%, 100%);
+
+              &:hover {
+                .image-2x('/assets/images/social-networks/facebook-logo-button-hover.png', 100%, 100%);
+              }
+            }
+          }
+        }
+      }
+
+      .footer__contact {
+        font-size: 0.8em;
+        margin-right: 1em;
+
+        a {
+          color: #F3C444;
+          text-decoration: none;
+        }
+      }
+    }
+  }
+}
+
+.image-2x(@image, @width, @height, @repeat: no-repeat) {
+  @filename  : ~`/(.*)\.(jpg|jpeg|png|gif)/.exec(@{image})[1]`;
+  @extension : ~`/(.*)\.(jpg|jpeg|png|gif)/.exec(@{image})[2]`;
+  background-image: ~`"url(@{filename}.@{extension})"`;
+  background-repeat: @repeat;
+
+  @media
+  only screen and (-webkit-min-device-pixel-ratio: 2),
+  only screen and (   min--moz-device-pixel-ratio: 2),
+  only screen and (     -o-min-device-pixel-ratio: 2/1),
+  only screen and (        min-device-pixel-ratio: 2),
+  only screen and (                min-resolution: 192dpi),
+  only screen and (                min-resolution: 2dppx) {
+    /* on retina, use image that's scaled by 2 */
+    background-image: ~`"url(@{filename}@2x.@{extension})"`;
+    background-size: @width @height;
+  }
+}
