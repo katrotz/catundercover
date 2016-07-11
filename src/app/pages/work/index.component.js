@@ -8,6 +8,7 @@ export default class WorkIndexPage {
     static get annotations() {
         return [
             new Component({
+                selector: 'works-page',
                 directives: [
                     PortfolioComponent
                 ],

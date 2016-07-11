@@ -1,0 +1,47 @@
+<section class="work">
+    <md-toolbar class="work__navigation">
+        <div class="side side__left">
+            <div class="content">{{work.title}}</div>
+        </div>
+        <div class="side side__right">
+            <div class="content">
+                <a href="javascript:;" (click)="goToPrevious()">Previous Project</a>
+                <span> / </span>
+                <a href="javascript:;" (click)="goToNext()">Next Project</a>
+            </div>
+        </div>
+    </md-toolbar>
+
+    <md-card class="work__description">
+        <md-card-content>
+            <div class="side side__left" [innerHTML]="work.description"></div>
+            <div class="side side__right">
+                <div class="attributes">
+                    <div class="row">
+                        <div class="title">Client</div>
+                        <div class="description">{{work.client}}</div>
+                    </div>
+                    <div class="row">
+                        <div class="title">Type of work</div>
+                        <div class="description">
+                            <span *ngFor="let tag of work.tags">
+                                {{tag.title}}
+                                &nbsp;
+                            </span>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="title">Year</div>
+                        <div class="description">{{work.year}}</div>
+                    </div>
+                </div>
+            </div>
+        </md-card-content>
+    </md-card>
+
+    <md-card class="work__details">
+        <md-card-content>
+            <div class="showcase" *ngFor="let detail of work.details"><img [src]="detail.image" [title]="detail.title" class="showcase__image"/></div>
+        </md-card-content>
+    </md-card>
+</section>

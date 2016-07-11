@@ -7,16 +7,15 @@ import { MD_CARD_DIRECTIVES } from '@angular2-material/card';
 import { MD_TOOLBAR_DIRECTIVES } from '@angular2-material/toolbar';
 import { MD_GRID_LIST_DIRECTIVES } from '@angular2-material/grid-list';
 
-import componentTemplate from './portfolio.component.html!text';
-import componentStyles from './portfolio.component.less!';
-import { getFilteredItems, getFilter } from './../../reducers/works';
-import Actions from './../../actions/index';
+import componentTemplate from './portfolio-item.component.html!text';
+import componentStyles from './portfolio-item.component.less!';
+import PortfolioService from './portfolio.service';
 
-export default class PortfolioComponent {
+export default class PortfolioItemComponent {
     static get annotations() {
         return [
             new Component({
-                selector: 'portfolio',
+                selector: 'portfolio-item',
                 template: componentTemplate,
                 styles: [componentStyles],
                 directives: [
@@ -25,6 +24,8 @@ export default class PortfolioComponent {
                     MD_TOOLBAR_DIRECTIVES,
                     MD_GRID_LIST_DIRECTIVES
                 ],
+                inputs: ['id'],
+                providers: [PortfolioService],
                 encapsulation: ViewEncapsulation.None
             })
         ];
@@ -32,30 +33,29 @@ export default class PortfolioComponent {
 
     static get parameters() {
         return [
-            [Store]
+            [Store],
+            [PortfolioService]
         ];
     }
 
-    constructor(store) {
+    constructor(store, portfolio) {
         this.store = store;
-        this.tags = this.store.select('tags');
-        this.items = this.store.select('works').let(getFilteredItems());
-        this.store.select('works').let(getFilter()).subscribe(filter => {this.selectedTags = filter;});
+        this.portfolio = portfolio;
+        this.work = null;
     }
 
     ngOnInit() {
-        this.selectedTags = [];
+        this.work = this.portfolio.getWork(this.id);
+        this.idx = this.portfolio.getWorkIndex(this.id);
     }
 
-    filterWorksByTag(iTag) {
-        this.store.dispatch(
-            Actions.tags.filterWorksByTag(iTag)
-        );
-
-        return this;
+    goToPrevious() {
+        this.idx -= 1;
+        this.work = this.portfolio.getWorkByIndex(this.idx);
     }
 
-    isSelectedTag(iTag) {
-        return _.find(this.selectedTags, {slug: iTag.slug});
+    goToNext() {
+        this.idx += 1;
+        this.work = this.portfolio.getWorkByIndex(this.idx);
     }
 }

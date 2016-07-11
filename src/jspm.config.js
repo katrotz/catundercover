@@ -9,7 +9,8 @@ SystemJS.config({
   },
   devConfig: {
     "map": {
-      "plugin-babel": "npm:systemjs-plugin-babel@0.0.12"
+      "plugin-babel": "npm:systemjs-plugin-babel@0.0.12",
+      "npm:less": "npm:less@2.7.1"
     }
   },
   transpiler: "plugin-babel",
@@ -52,7 +53,7 @@ SystemJS.config({
     "@angular2-material/grid-list": "npm:@angular2-material/grid-list@2.0.0-alpha.5-2",
     "@angular2-material/toolbar": "npm:@angular2-material/toolbar@2.0.0-alpha.5-2",
     "@ngrx/core": "npm:@ngrx/core@1.0.0",
-    "@ngrx/store": "npm:@ngrx/store@2.0.0",
+    "@ngrx/store": "npm:@ngrx/store@2.0.1",
     "assert": "github:jspm/nodelibs-assert@0.2.0-alpha",
     "buffer": "github:jspm/nodelibs-buffer@0.2.0-alpha",
     "constants": "github:jspm/nodelibs-constants@0.2.0-alpha",
@@ -104,7 +105,7 @@ SystemJS.config({
     },
     "github:jspm/nodelibs-buffer@0.2.0-alpha": {
       "map": {
-        "buffer-browserify": "npm:buffer@4.6.0"
+        "buffer-browserify": "npm:buffer@4.7.0"
       }
     },
     "npm:stream-browserify@2.0.1": {
@@ -124,13 +125,6 @@ SystemJS.config({
         "core-util-is": "npm:core-util-is@1.0.2"
       }
     },
-    "npm:buffer@4.6.0": {
-      "map": {
-        "base64-js": "npm:base64-js@1.1.2",
-        "ieee754": "npm:ieee754@1.1.6",
-        "isarray": "npm:isarray@1.0.0"
-      }
-    },
     "github:jspm/nodelibs-domain@0.2.0-alpha": {
       "map": {
         "domain-browserify": "npm:domain-browser@1.1.7"
@@ -147,10 +141,16 @@ SystemJS.config({
         "punycode": "npm:punycode@1.3.2"
       }
     },
+    "npm:buffer@4.7.0": {
+      "map": {
+        "base64-js": "npm:base64-js@1.1.2",
+        "isarray": "npm:isarray@1.0.0",
+        "ieee754": "npm:ieee754@1.1.6"
+      }
+    },
     "github:katrotz/jspm-less-plugin@0.0.11": {
       "map": {
-        "npm:less": "npm:less@2.7.1",
-        "npm:less/lib/less-browser/index": "npm:less@2.7.1/lib/less-browser/index"
+        "npm:less": "npm:less@2.7.1"
       }
     }
   }

@@ -43,7 +43,7 @@
       "@angular2-material/card": "npm:@angular2-material/card@^2.0.0-alpha.5-2",
       "@angular2-material/grid-list": "npm:@angular2-material/grid-list@^2.0.0-alpha.5-2",
       "@angular2-material/toolbar": "npm:@angular2-material/toolbar@^2.0.0-alpha.5-2",
-      "@ngrx/store": "npm:@ngrx/store@^2.0.0",
+      "@ngrx/store": "npm:@ngrx/store@^2.0.1",
       "core-js": "npm:core-js@^2.4.0",
       "css": "github:systemjs/plugin-css@^0.1.23",
       "json": "github:systemjs/plugin-json@^0.1.2",

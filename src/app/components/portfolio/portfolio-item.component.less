@@ -1,0 +1,112 @@
+@page-size: 1024px;
+@page-small-size: @page-size - 128px;
+
+portfolio-item {
+  margin: 0;
+  padding: 0;
+  display: block;
+
+  section.work {
+    .work__navigation {
+      background-color: transparent;
+      padding: 0;
+
+      md-toolbar-row {
+        .side {
+          height: 4em;
+          width: 50%;
+          font-size: 0.6em;
+          color: white;
+          text-transform: uppercase;
+          display: flex;
+          flex-direction: row;
+          align-items: center;
+
+          .content {
+            width: @page-small-size/2;
+          }
+
+          a {
+            text-decoration: none;
+            display: inline-block;
+            color: white;
+
+            &:hover {
+
+            }
+          }
+        }
+        .side__left {
+          background-color: black;
+          justify-content: flex-end;
+
+          & > div {
+            text-align: left;
+            width: 100%;
+          }
+        }
+        .side__right {
+          background-color: #F3C444;
+          justify-content: flex-start;
+
+          & > div {
+            text-align: right;
+            width: 100%;
+          }
+        }
+      }
+    }
+
+    .work__description {
+      width: @page-small-size;
+      margin: 3em auto auto auto;
+      box-shadow: none;
+      text-align: left;
+      color: #252525;
+      line-height: 1.5em;
+
+      md-card-content {
+        display: flex;
+        flex-direction: row;
+
+        .side {
+          &.side__left {
+            width: (9/16) * @page-small-size;
+          }
+
+          &.side__right {
+            width: (7/16) * @page-small-size;
+          }
+
+          .attributes {
+            font-size: 0.9em;
+            margin-left: 40%;
+
+            .row {
+              .title {
+                color: #A5A5A5;
+                text-transform: uppercase;
+              }
+              .description {}
+            }
+          }
+        }
+      }
+    }
+
+    .work__details {
+
+      box-shadow: none;
+
+      .showcase {
+        text-align: center;
+        margin: 2em auto auto auto;
+        max-width: @page-size;
+
+        img.showcase__image {
+          width: 100%;
+        }
+      }
+    }
+  }
+}

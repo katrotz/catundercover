@@ -9,7 +9,7 @@ import APP_ROUTER_PROVIDERS from './routes/index';
 import CatUndercoverComponent from './components/catundercover/catundercover.component';
 
 export function run() {
-    enableProdMode();
+    // enableProdMode();
 
     return ngBootstrapBrowser(
         CatUndercoverComponent,
