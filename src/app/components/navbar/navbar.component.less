@@ -1,5 +1,9 @@
 @navbarHeight: 10em;
 
+* {
+  box-sizing: border-box;
+}
+
 .navbar {
   flex-direction: row;
   flex-wrap: nowrap;
@@ -7,6 +11,11 @@
   align-items: center;
   height: @navbarHeight;
   background-color: transparent;
+
+  -moz-transition: height 0.5s ease, width 0.5s ease, height 0.5s ease, opacity 0.5s;
+  -webkit-transition: height 0.5s ease, width 0.5s ease, height 0.5s ease, opacity 0.5s;
+  -o-transition: height 0.5s ease, width 0.5s ease, height 0.5s ease, opacity 0.5s;
+  transition: height 0.5s ease, width 0.5s ease, height 0.5s ease, opacity 0.5s;
 
   .navbar__item {
     font-size: 1.5em;
@@ -34,6 +43,10 @@
     }
   }
 
+  .navbar__item__main {
+
+  }
+
   .navbar__secondary {
     flex-direction: row;
     flex-wrap: nowrap;
@@ -44,6 +57,18 @@
     .navbar__item {
       border: none;
       font-size: 0.6em;
+    }
+  }
+
+  &.sticky {
+    position: fixed;
+    top: 0;
+    height:2.5em;
+    z-index: 100;
+    background-color: white;
+
+    .navbar__item__main {
+      display: none;
     }
   }
 }

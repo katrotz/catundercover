@@ -10,6 +10,12 @@ portfolio-item {
     .work__navigation {
       background-color: transparent;
       padding: 0;
+      z-index: 300;
+
+      -moz-transition: height 0.5s ease;
+      -webkit-transition: height 0.5s ease;
+      -o-transition: height 0.5s ease;
+      transition: height 0.5s ease, width 0.5s ease, height 1s ease, opacity 0.5s;
 
       md-toolbar-row {
         .side {
@@ -54,6 +60,12 @@ portfolio-item {
             width: 100%;
           }
         }
+      }
+
+      &.sticky {
+        position: fixed;
+        top: 2.4em;
+        z-index: 101;
       }
     }
 

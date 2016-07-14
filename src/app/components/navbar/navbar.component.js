@@ -8,6 +8,7 @@ import { MD_BUTTON_DIRECTIVES } from '@angular2-material/button';
 import SplitListPipe from './../../pipes/split-list.pipe';
 import componentTemplate from './navbar.component.html';
 import componentStyles from './navbar.component.less';
+import StickyDirective from './../../directives/sticky';
 
 export default class NavbarComponent{
     static get annotations() {
@@ -17,7 +18,8 @@ export default class NavbarComponent{
                 directives: [
                     MD_TOOLBAR_DIRECTIVES,
                     MD_BUTTON_DIRECTIVES,
-                    ROUTER_DIRECTIVES
+                    ROUTER_DIRECTIVES,
+                    StickyDirective
                 ],
                 pipes: [SplitListPipe],
                 template: componentTemplate,

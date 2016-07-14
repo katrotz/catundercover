@@ -10,6 +10,7 @@ import { MD_GRID_LIST_DIRECTIVES } from '@angular2-material/grid-list';
 import componentTemplate from './portfolio-item.component.html!text';
 import componentStyles from './portfolio-item.component.less!';
 import PortfolioService from './portfolio.service';
+import StickyDirective from './../../directives/sticky';
 
 export default class PortfolioItemComponent {
     static get annotations() {
@@ -22,7 +23,8 @@ export default class PortfolioItemComponent {
                     ROUTER_DIRECTIVES,
                     MD_CARD_DIRECTIVES,
                     MD_TOOLBAR_DIRECTIVES,
-                    MD_GRID_LIST_DIRECTIVES
+                    MD_GRID_LIST_DIRECTIVES,
+                    StickyDirective
                 ],
                 inputs: ['id'],
                 providers: [PortfolioService],
