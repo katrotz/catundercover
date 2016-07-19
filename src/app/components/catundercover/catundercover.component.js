@@ -15,7 +15,9 @@ export default class CatUndercoverComponent{
                 template: `
                     <section class="hr hr--orange"></section>
                     <navbar></navbar>
-                    <router-outlet></router-outlet>
+                    <div id="main" class="main">
+                        <router-outlet></router-outlet>
+                    </div>
                     <footer></footer>
                 `,
                 styles: [componentStyles],

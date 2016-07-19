@@ -2,7 +2,7 @@
 
 import { Component, ViewEncapsulation } from '@angular/core';
 import { Store } from '@ngrx/store';
-import { ROUTER_DIRECTIVES } from '@angular/router';
+import { ROUTER_DIRECTIVES, Router } from '@angular/router';
 import { MD_CARD_DIRECTIVES } from '@angular2-material/card';
 import { MD_TOOLBAR_DIRECTIVES } from '@angular2-material/toolbar';
 import { MD_GRID_LIST_DIRECTIVES } from '@angular2-material/grid-list';
@@ -36,13 +36,15 @@ export default class PortfolioItemComponent {
     static get parameters() {
         return [
             [Store],
-            [PortfolioService]
+            [PortfolioService],
+            [Router]
         ];
     }
 
-    constructor(store, portfolio) {
+    constructor(store, portfolio, router) {
         this.store = store;
         this.portfolio = portfolio;
+        this.router = router;
         this.work = null;
     }
 
@@ -54,10 +56,12 @@ export default class PortfolioItemComponent {
     goToPrevious() {
         this.idx -= 1;
         this.work = this.portfolio.getWorkByIndex(this.idx);
+        this.router.navigate(['/work', this.work.slug]);
     }
 
     goToNext() {
         this.idx += 1;
         this.work = this.portfolio.getWorkByIndex(this.idx);
+        this.router.navigate(['/work', this.work.slug]);
     }
 }

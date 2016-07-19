@@ -1,13 +1,15 @@
-<md-toolbar [color]="primary" class="navbar" [sticky]>
+<span id="sticky-logo">
+    <a md-button routerLink="/">{{'Cat Undercover' | uppercase}}</a>
+</span>
+<md-toolbar [color]="primary" class="navbar">
     <span class="navbar__item" *ngFor="let menuItem of menuItems | splitList:2:1">
         <a md-button [routerLink]="menuItem.routerLink">{{menuItem.title | uppercase}}</a>
     </span>
 
     <span class="navbar__item navbar__item__main">
-        <span class="navbar__item__logo">
-            <!--<img src="/assets/images/catundercover.png"/>-->
+        <span class="navbar__item__main--inner">
+            <a md-button routerLink="/">{{'Cat Undercover' | uppercase}}</a>
         </span>
-        <a md-button routerLink="/">{{'Cat Undercover' | uppercase}}</a>
     </span>
 
     <span class="navbar__item" *ngFor="let menuItem of menuItems | splitList:2:2">

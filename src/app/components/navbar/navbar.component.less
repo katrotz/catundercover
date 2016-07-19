@@ -1,7 +1,24 @@
 @navbarHeight: 10em;
+@navbarStickyHeight: 2.5em;
 
 * {
   box-sizing: border-box;
+}
+
+#sticky-logo {
+  position: fixed;
+  top: 0;
+  left: 100px;
+  z-index: 300;
+  height: 64px;
+  line-height: 64px;
+  transition: all 1s ease;
+  display: none;
+  font-weight: 900;
+
+  a:hover {
+    background-color: transparent;
+  }
 }
 
 .navbar {
@@ -10,12 +27,9 @@
   justify-content: center;
   align-items: center;
   height: @navbarHeight;
-  background-color: transparent;
-
-  -moz-transition: height 0.5s ease, width 0.5s ease, height 0.5s ease, opacity 0.5s;
-  -webkit-transition: height 0.5s ease, width 0.5s ease, height 0.5s ease, opacity 0.5s;
-  -o-transition: height 0.5s ease, width 0.5s ease, height 0.5s ease, opacity 0.5s;
-  transition: height 0.5s ease, width 0.5s ease, height 0.5s ease, opacity 0.5s;
+  background-color: white;
+  z-index: 100;
+  position: fixed;
 
   .navbar__item {
     font-size: 1.5em;
@@ -23,13 +37,6 @@
     /*border: solid gray 1px;*/
 
     .navbar__item__logo {
-      .image-2x('assets/images/catundercover.png', 100%, auto);
-      background-size: cover;
-      position: absolute;
-      width: 100%;
-      height: @navbarHeight;
-      transform: translateY(-72px);
-
       &:hover {
         cursor: crosshair;
       }
@@ -44,7 +51,22 @@
   }
 
   .navbar__item__main {
+    display: inline-block;
+    position: relative;
 
+    /*transition: width 0.5s ease;*/
+    .navbar__item__main--inner {
+      a {
+        display: flex;
+        align-items: center;
+        height: @navbarHeight;
+        .image-2x('assets/images/catundercover.png', 80%, auto);
+        background-size: cover;
+        background-position-y: -8px;
+        background-position-x: center;
+        /*transform: translateY(-72px);*/
+      }
+    }
   }
 
   .navbar__secondary {
@@ -63,9 +85,8 @@
   &.sticky {
     position: fixed;
     top: 0;
-    height:2.5em;
+    height: @navbarStickyHeight;
     z-index: 100;
-    background-color: white;
 
     .navbar__item__main {
       display: none;

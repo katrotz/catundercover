@@ -9,7 +9,10 @@ export default class StickyDirective {
                 selector: '[sticky]',
                 host: {
                     '(window:scroll)': 'onScroll()'
-                }
+                },
+                inputs: [
+                    'stickyTopPx'
+                ]
             })
         ]
     }
@@ -21,21 +24,26 @@ export default class StickyDirective {
     }
 
     constructor(element) {
-        this.className = 'sticky';
-        this.element = element;
+        this.element = element.nativeElement;
         window.x = this.element;
     }
-    
-    onScroll() {
-        let boundingRect = this.element.nativeElement.getBoundingClientRect();
-        let scrollTop = document.scrollingElement.scrollTop;
-        let hasSticky = this.element.nativeElement.classList.contains(this.className);
-        let mustStick = scrollTop > boundingRect.height/4;
 
-        if (!hasSticky && mustStick) {
-            this.element.nativeElement.classList.add(this.className);
-        } else if (hasSticky && !mustStick) {
-            this.element.nativeElement.classList.remove(this.className);
+    ngOnInit() {
+        this.elementTopPx = this.element.getBoundingClientRect().top;
+        this.stickyTopPx = parseFloat(this.stickyTopPx) || 0;
+    }
+
+    onScroll() {
+        let scrollTop = this.currentScroll();
+
+        if (scrollTop >= (this.elementTopPx - this.stickyTopPx)) {
+            this.element.classList.add('sticky');
+        } else {
+            this.element.classList.remove('sticky');
         }
+    }
+
+    currentScroll() {
+        return window.pageYOffset || document.documentElement.scrollTop || document.scrollingElement.scrollTop;
     }
 }
