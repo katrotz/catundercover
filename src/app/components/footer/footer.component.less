@@ -1,6 +1,13 @@
+@import "./../../less/variables";
+
 footer {
+  width: 100%;
+  margin: 0 auto;
+  padding: 0 @outerPageMargin;
+
   .footer {
     background-color: transparent;
+    padding: 0;
 
     md-toolbar-row {
       justify-content: space-between;
@@ -8,7 +15,6 @@ footer {
       .footer__social {
         display: flex;
         flex-direction: row;
-        margin-left: 1em;
 
         .footer__social_item {
           display: flex;
@@ -59,13 +65,27 @@ footer {
       }
 
       .footer__contact {
-        font-size: 0.8em;
-        margin-right: 1em;
+        &:extend(.smallFont);
+        &:extend(.bold);
+        &:extend(.sansFont);
+
+        margin-right: 0;
 
         a {
           color: #F3C444;
           text-decoration: none;
         }
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: 1024px) {
+  footer {
+    .footer {
+      md-toolbar-row {
+        width: 95%;
+        margin: auto;
       }
     }
   }

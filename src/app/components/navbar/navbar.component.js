@@ -42,16 +42,16 @@ export default class NavbarComponent{
                 routerLink: '/work'
             },
             {
-                title: 'About',
-                routerLink: '/about'
-            },
-            {
                 title: 'Moodboard',
                 routerLink: '/moodboard'
             },
             {
+                title: 'About',
+                routerLink: '/about'
+            },
+            {
                 title: 'Thoughts',
-                routerLink: '/thoughts'
+                routerLink: '/'
             }
         ];
         this.element = element;
@@ -59,7 +59,7 @@ export default class NavbarComponent{
 
     ngOnInit() {
         this.navbarElement = this.element.nativeElement.querySelector('.navbar');
-        this.logoElement = this.navbarElement.querySelector('.navbar__item__main');
+        this.logoElement = this.navbarElement.querySelector('.logo');
         this.stickyLogoElement = document.querySelector('#sticky-logo');
 
         this.elementInitClientRect = this.navbarElement.getBoundingClientRect();

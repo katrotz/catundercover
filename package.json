@@ -48,6 +48,7 @@
       "css": "github:systemjs/plugin-css@^0.1.23",
       "json": "github:systemjs/plugin-json@^0.1.2",
       "less": "github:katrotz/jspm-less-plugin@^0.0.11",
+      "lightbox2": "npm:lightbox2@^2.8.2",
       "lodash": "npm:lodash@^4.13.1",
       "reflect-metadata": "npm:reflect-metadata@^0.1.3",
       "text": "github:systemjs/plugin-text@^0.0.8"

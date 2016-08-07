@@ -11,6 +11,7 @@ import componentTemplate from './portfolio.component.html!text';
 import componentStyles from './portfolio.component.less!';
 import { getFilteredItems, getFilter } from './../../reducers/works';
 import Actions from './../../actions/index';
+import PortfolioShowcase from './portfolio-showcase.component';
 
 export default class PortfolioComponent {
     static get annotations() {
@@ -23,7 +24,8 @@ export default class PortfolioComponent {
                     ROUTER_DIRECTIVES,
                     MD_CARD_DIRECTIVES,
                     MD_TOOLBAR_DIRECTIVES,
-                    MD_GRID_LIST_DIRECTIVES
+                    MD_GRID_LIST_DIRECTIVES,
+                    PortfolioShowcase
                 ],
                 encapsulation: ViewEncapsulation.None
             })
@@ -45,6 +47,8 @@ export default class PortfolioComponent {
 
     ngOnInit() {
         this.selectedTags = [];
+
+        this.tags.subscribe(tags => {tags.length ? this.filterWorksByTag(tags[0]) : null;});
     }
 
     filterWorksByTag(iTag) {

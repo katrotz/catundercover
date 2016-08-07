@@ -1,9 +1,4 @@
-@navbarHeight: 10em;
-@navbarStickyHeight: 2.5em;
-
-* {
-  box-sizing: border-box;
-}
+@import "./../../less/variables";
 
 #sticky-logo {
   position: fixed;
@@ -32,7 +27,6 @@
   position: fixed;
 
   .navbar__item {
-    font-size: 1.5em;
     position: relative;
     /*border: solid gray 1px;*/
 
@@ -46,15 +40,25 @@
       &:hover {
         text-decoration: line-through;
         background-color: transparent;
+        color: @saffronColor;
       }
+
+      font-weight: 800;
+      font-size: 13px;
+      letter-spacing: 0.15em;
     }
   }
 
-  .navbar__item__main {
+  .logo {
+    margin-top: -25px;
+    width: 150px;
+  }
+
+  /*.navbar__item__main {
     display: inline-block;
     position: relative;
 
-    /*transition: width 0.5s ease;*/
+    !*transition: width 0.5s ease;*!
     .navbar__item__main--inner {
       a {
         display: flex;
@@ -64,10 +68,10 @@
         background-size: cover;
         background-position-y: -8px;
         background-position-x: center;
-        /*transform: translateY(-72px);*/
+        !*transform: translateY(-72px);*!
       }
     }
-  }
+  }*/
 
   .navbar__secondary {
     flex-direction: row;

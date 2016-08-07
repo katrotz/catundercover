@@ -2,7 +2,7 @@
 
 export const tagsState = [
     {
-        title: 'All',
+        title: 'All projects',
         slug: 'all'
     },
     {

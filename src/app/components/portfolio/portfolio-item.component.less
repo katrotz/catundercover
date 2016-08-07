@@ -1,5 +1,6 @@
-@page-size: 1024px;
-@page-small-size: @page-size - 128px;
+@import "./../../less/variables";
+
+@page-small-size: @pageSize - 128px;
 
 portfolio-item {
   margin: 0;
@@ -7,6 +8,13 @@ portfolio-item {
   display: block;
 
   section.work {
+
+    md-card {
+      &:extend(.sansFont);
+      &:extend(.largeFont);
+      font-weight: 200;
+    }
+
     .work__navigation {
       background-color: transparent;
       padding: 0;
@@ -18,6 +26,10 @@ portfolio-item {
       transition: height 0.5s ease, width 0.5s ease, height 1s ease, opacity 0.5s;
 
       md-toolbar-row {
+        left: 0;
+        width: 100%;
+        position: absolute;
+
         .side {
           height: 4em;
           width: 50%;
@@ -65,6 +77,9 @@ portfolio-item {
       &.sticky {
         position: fixed;
         top: 2.4em;
+        left: 0;
+        margin: 0;
+        padding: 0;
         z-index: 101;
       }
     }
@@ -80,6 +95,7 @@ portfolio-item {
       md-card-content {
         display: flex;
         flex-direction: row;
+        &:extend(.normalFont);
 
         .side {
           &.side__left {
@@ -91,7 +107,6 @@ portfolio-item {
           }
 
           .attributes {
-            font-size: 0.9em;
             margin-left: 40%;
 
             .row {
@@ -113,7 +128,7 @@ portfolio-item {
       .showcase {
         text-align: center;
         margin: 2em auto auto auto;
-        max-width: @page-size;
+        max-width: @pageSize;
 
         img.showcase__image {
           width: 100%;

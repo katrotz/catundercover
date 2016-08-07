@@ -2,17 +2,24 @@
     <a md-button routerLink="/">{{'Cat Undercover' | uppercase}}</a>
 </span>
 <md-toolbar [color]="primary" class="navbar">
-    <span class="navbar__item" *ngFor="let menuItem of menuItems | splitList:2:1">
-        <a md-button [routerLink]="menuItem.routerLink">{{menuItem.title | uppercase}}</a>
-    </span>
-
-    <span class="navbar__item navbar__item__main">
-        <span class="navbar__item__main--inner">
-            <a md-button routerLink="/">{{'Cat Undercover' | uppercase}}</a>
+    <div class="navbar__left">
+        <span class="navbar__item" *ngFor="let menuItem of menuItems | splitList:2:1">
+            <a md-button [routerLink]="menuItem.routerLink">{{menuItem.title | uppercase}}</a>
         </span>
-    </span>
+    </div>
 
-    <span class="navbar__item" *ngFor="let menuItem of menuItems | splitList:2:2">
+    <div class="navbar__center">
+        <img src="/assets/images/logo.png" class="logo"/>
+        <!--<span class="navbar__item navbar__item__main">
+            <span class="navbar__item__main&#45;&#45;inner">
+                <a md-button routerLink="/">{{'Cat Undercover' | uppercase}}</a>
+            </span>
+        </span>-->
+    </div>
+
+    <div class="navbar__right">
+        <span class="navbar__item" *ngFor="let menuItem of menuItems | splitList:2:2">
         <a href="" md-button [routerLink]="menuItem.routerLink">{{menuItem.title | uppercase}}</a>
     </span>
+    </div>
 </md-toolbar>

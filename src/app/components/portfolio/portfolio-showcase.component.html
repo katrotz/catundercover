@@ -1,0 +1,23 @@
+<md-card class="portfolio-showcase">
+    <md-card class="screen" *ngIf="item">
+        <div class="screen__wrapper">
+            <div class="screen__poster" [style.background-image]="'url('+item.image+')'">
+                &nbsp;
+            </div>
+            <div class="screen__item">
+                <h1 class="title">{{item.title}}</h1>
+                <a [routerLink]="['/work', item.slug]">View Project</a>
+            </div>
+        </div>
+    </md-card>
+    <md-card class="navigation">
+        <div class="navigation__items">
+            <a class="navigation__item"
+               href="javascript:;"
+               *ngFor="let item of items | async; let i = index;"
+               [class.selected]="selected == i"
+               (click)="select(i)"
+            >{{formatIndex(i)}}</a>
+        </div>
+    </md-card>
+</md-card>

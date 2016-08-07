@@ -9,8 +9,7 @@ SystemJS.config({
   },
   devConfig: {
     "map": {
-      "plugin-babel": "npm:systemjs-plugin-babel@0.0.12",
-      "npm:less": "npm:less@2.7.1"
+      "plugin-babel": "npm:systemjs-plugin-babel@0.0.12"
     }
   },
   transpiler: "plugin-babel",
@@ -30,6 +29,9 @@ SystemJS.config({
         }
       }
     }
+  },
+  map: {
+    "npm:less": "npm:less@2.7.1"
   }
 });
 
@@ -67,6 +69,7 @@ SystemJS.config({
     "image-size": "npm:image-size@0.5.0",
     "json": "github:systemjs/plugin-json@0.1.2",
     "less": "github:katrotz/jspm-less-plugin@0.0.11",
+    "lightbox2": "npm:lightbox2@2.8.2",
     "lodash": "npm:lodash@4.13.1",
     "mime": "npm:mime@1.3.4",
     "mkdirp": "npm:mkdirp@0.5.1",

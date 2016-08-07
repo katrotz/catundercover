@@ -1,0 +1,103 @@
+@import "../../less/variables";
+
+@minHeight: 400px;
+@maxHeight: 600px;
+@posterSize: 400px;
+@navigationSize: 4em;
+@showcaseSize: 100%;
+
+.portfolio-showcase {
+  min-height: @minHeight;
+  background: white;
+  box-shadow: none;
+  padding: 0;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  max-width: @showcaseSize;
+  margin-right: auto;
+  margin-left: auto;
+
+  &:hover {
+    box-shadow: none;
+  }
+
+  &:after {
+    clear: both;
+  }
+
+  .screen {
+    width: 100%;
+    z-index: 50;
+    min-height: @minHeight;
+    box-shadow: none;
+    padding: 0;
+
+    .screen__wrapper {
+      display: flex;
+      justify-content: flex-start;
+      align-items: center;
+
+      .screen__poster {
+        width: @posterSize;
+        min-height: @minHeight;
+        background-position: center;
+        background-repeat: no-repeat;
+      }
+
+      .screen__item {
+        margin-left: 3em;
+        text-transform: uppercase;
+
+        a {
+          text-decoration: none;
+          color: @mineShaftColor;
+          text-transform: uppercase;
+          font-size: 0.8rem;
+
+          &:hover {
+            text-decoration: line-through;
+            color: @saffronColor;
+          }
+        }
+      }
+    }
+  }
+
+  .navigation {
+    min-height: @minHeight;
+    z-index: 60;
+    box-shadow: none;
+    padding: 0;
+    position: absolute;
+    top: 0;
+    right: 0;
+    background-color: white;
+
+    .navigation__items {
+      display: flex;
+      min-height: @minHeight;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+
+      a.navigation__item {
+        display: inline-block;
+        text-decoration: none;
+        width: @navigationSize;
+        height: @navigationSize;
+        line-height: @navigationSize;
+        background-color: transparent;
+        color: @mineShaftColor;
+        text-align: center;
+        font-size: 10px;
+        z-index: 70;
+
+        &.selected {
+          background-color: @mineShaftColor;
+          color: white;
+        }
+      }
+    }
+  }
+}

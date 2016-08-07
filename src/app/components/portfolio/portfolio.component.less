@@ -1,8 +1,12 @@
+@import "./../../less/variables";
+
 section.portfolio {
+  width: 100%;
+
   md-card.portfolio__card {
     background-color: #F9F9F9;
     box-shadow: none;
-    padding-top: 10px;
+    padding-top: 1em;
 
     .navbar {
       align-items: center;
@@ -10,14 +14,24 @@ section.portfolio {
       flex-wrap: nowrap;
       justify-content: center;
       background-color: transparent;
+      margin-top: 1em;
+      margin-bottom: 1em;
 
       .navbar__item {
-        transform: scale(0.8);
+        &:extend(.sansSerifFont);
+        &:extend(.smallFont);
+        &:extend(.normal);
 
         a {
+          &:extend(.sansSerifFont);
+          &:extend(.smallFont);
+          &:extend(.normal);
+          padding: 0 0.5rem;
+
           &.selected, &:hover {
             text-decoration: line-through;
             background-color: transparent;
+            color: @saffronColor;
           }
         }
       }

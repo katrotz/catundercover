@@ -1,0 +1,56 @@
+@import './../../less/variables';
+
+.about {
+  width: 100%;
+
+  md-card.about__card {
+    background-color: #F9F9F9;
+    box-shadow: none;
+  }
+
+  .about__card {
+    .general {
+      &:extend(.sansFont);
+      &:extend(.largeFont);
+      padding-top: 60px;
+      padding-left: 40px;
+      line-height: 1.7em;
+    }
+
+    .cv {
+      margin: 30px;
+      padding: 3em;
+      background-color: white;
+      text-align: center;
+      font-weight: 400;
+      &:extend(.largeFont);
+
+      .cv__block {
+        margin-left: auto;
+        margin-right: auto;
+        max-width: 600px;
+        &:extend(.sansFont);
+
+        .separated {
+          margin-top: 3em;
+        }
+
+        .title {
+          &:extend(.sansSerifFont);
+          font-weight: bold;
+
+          text-transform: uppercase;
+        }
+
+        .separator {
+          span.circle {
+            margin-left: 1em;
+            &:first-child {
+              margin-left: 0;
+            }
+          }
+        }
+      }
+    }
+  }
+}

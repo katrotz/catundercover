@@ -1,6 +1,14 @@
+@import './../../less/variables';
+
+* {
+  box-sizing: border-box;
+}
+
 body {
   margin: 0;
   padding: 0;
+  &:extend(.normalFont);
+  &:extend(.sansSerifFont);
 
   catundercover {
     margin: 0;
@@ -18,7 +26,51 @@ body {
     }
 
     #main {
-      padding-top: 13em;
+      width: 100%;
+      margin: 0 auto;
+      padding: 0 @outerPageMargin 0 @outerPageMargin;
+      padding-top: calc(@navbarHeight + 3em);
+      color: @mineShaftColor;
+      line-height: 1.5em;
+      &:extend(.sansFont);
+      &:extend(.normalFont);
+
+      .page {
+        width: 100%;
+        max-width: @pageSize;
+        margin: 0 auto;
+      }
+    }
+
+    .emphasis {
+      color: @saffronColor
+    }
+
+    .red {
+      background-color: @burntSiennaColor;
+    }
+
+    .yellow {
+      background-color: @saffronColor;
+    }
+
+    .blue {
+      background-color: @shakespeareColor;
+    }
+
+    .circle {
+      width: 0.3em;
+      height: 0.3em;
+      display: inline-block;
+      -webkit-border-radius: 0.15em;
+      -moz-border-radius: 0.15em;
+      border-radius: 0.15em;
+    }
+
+    md-card,
+    [md-raised-button], [md-fab], [md-mini-fab], [md-button], [md-icon-button] {
+      &:extend(.normalFont);
+      &:extend(.sansSerifFont);
     }
   }
 }

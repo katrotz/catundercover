@@ -1,6 +1,8 @@
 'use strict';
 
+import _ from 'lodash';
 import Actions from './../actions/index';
+import { tagsState } from './tags';
 
 const dummyDescription = `
 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc accumsan ligula nunc, pharetra imperdiet risus malesuada et. Nulla facilisi. Suspendisse tempus nisl tortor, at pharetra ligula bibendum eget. Vivamus vehicula non neque quis pulvinar. Donec a ultricies purus. Vivamus egestas lacinia lorem, eu dignissim magna mollis sit amet. Nullam interdum, sapien id sodales luctus, metus massa faucibus elit, in malesuada metus nisl in nisl. Vivamus ut porttitor ligula. Sed vestibulum mauris mauris, vel tristique metus dapibus vel. Aliquam rhoncus nulla ut turpis feugiat ultrices. In hac habitasse platea dictumst. Nullam venenatis nec libero et mollis. Cras lacus metus, cursus quis accumsan et, gravida vitae erat. Vestibulum pretium ante hendrerit lacus vestibulum, quis finibus mi condimentum.
@@ -20,10 +22,7 @@ const dummyDetails = [
 ];
 
 export const worksState = {
-    filter: [{
-        title: 'All',
-        slug: 'all'
-    }],
+    filter: [_.cloneDeep(tagsState[0])],
     items: [
         {
             title: 'Fatty Sundays',
@@ -31,7 +30,7 @@ export const worksState = {
             slug: 'fatty-sundays',
             client: 'Flosites',
             year: '2015',
-            image: '/assets/images/anna-lucia-events.png',
+            image: '/assets/images/poster-1.jpg',
             details: dummyDetails,
             tags: [
                 {
