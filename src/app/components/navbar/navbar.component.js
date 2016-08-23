@@ -1,7 +1,7 @@
 'use strict';
 
 import { Component, ViewEncapsulation, ElementRef } from '@angular/core';
-import { ROUTER_DIRECTIVES } from '@angular/router';
+import { ROUTER_DIRECTIVES, RouterLinkActive } from '@angular/router';
 import { MD_TOOLBAR_DIRECTIVES } from '@angular2-material/toolbar';
 import { MD_BUTTON_DIRECTIVES } from '@angular2-material/button';
 
@@ -17,7 +17,8 @@ export default class NavbarComponent{
                 directives: [
                     MD_TOOLBAR_DIRECTIVES,
                     MD_BUTTON_DIRECTIVES,
-                    ROUTER_DIRECTIVES
+                    ROUTER_DIRECTIVES,
+                    RouterLinkActive
                 ],
                 pipes: [SplitListPipe],
                 template: componentTemplate,
@@ -39,19 +40,19 @@ export default class NavbarComponent{
         this.menuItems = [
             {
                 title: 'Work',
-                routerLink: '/work'
+                routerLink: 'work'
             },
             {
                 title: 'Moodboard',
-                routerLink: '/moodboard'
+                routerLink: 'moodboard'
             },
             {
                 title: 'About',
-                routerLink: '/about'
+                routerLink: 'about'
             },
             {
                 title: 'Thoughts',
-                routerLink: '/'
+                routerLink: 'thoughts'
             }
         ];
         this.element = element;
@@ -60,8 +61,7 @@ export default class NavbarComponent{
     ngOnInit() {
         this.navbarElement = this.element.nativeElement.querySelector('.navbar');
         this.logoElement = this.navbarElement.querySelector('.logo');
-        this.stickyLogoElement = document.querySelector('#sticky-logo');
-
+        this.stickyLogoElement = document.querySelector('#sticky-logo a');
         this.elementInitClientRect = this.navbarElement.getBoundingClientRect();
         this.minElementHeight = parseFloat(window.getComputedStyle(this.navbarElement).minHeight);
     }
@@ -78,16 +78,18 @@ export default class NavbarComponent{
         }
 
         this.navbarElement.style.height = `${height}px`;
+        this.stickyLogoElement.style.height = `${height}px`;
+        this.stickyLogoElement.style.lineHeight = `${height}px`;
 
         let ratio = parseInt(100 * ((height - this.minElementHeight)/(this.elementInitClientRect.height - this.minElementHeight)));
 
         this.logoElement.style.opacity = ratio/100;
         if (!ratio) {
             this.logoElement.style.display = 'none';
-            /*this.stickyLogoElement.style.display = 'block';*/
+            this.stickyLogoElement.style.display = 'block';
         } else {
             this.logoElement.style.display = 'flex';
-            /*this.stickyLogoElement.style.display = 'none';*/
+            this.stickyLogoElement.style.display = 'none';
         }
     }
 

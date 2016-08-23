@@ -17,11 +17,20 @@ body {
 
     .hr {
       width: 100%;
-      &.hr--orange {
-        position: fixed;
+      &.top, &.bottom {
         z-index: 200;
         height: 3px;
         background-color: #F3C444;
+      }
+
+      &.top {
+        position: fixed;
+        top: 0;
+      }
+
+      &.bottom {
+        position: relative;
+        bottom: 0;
       }
     }
 

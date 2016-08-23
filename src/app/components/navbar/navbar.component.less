@@ -3,16 +3,17 @@
 #sticky-logo {
   position: fixed;
   top: 0;
-  left: 100px;
+  left: @outerPageMargin;
   z-index: 300;
-  height: 64px;
-  line-height: 64px;
-  transition: all 1s ease;
-  display: none;
-  font-weight: 900;
 
-  a:hover {
-    background-color: transparent;
+  a {
+    display: none;
+    font-weight: 800;
+    padding: 0;
+
+    &:hover {
+      background-color: transparent;
+    }
   }
 }
 
@@ -25,6 +26,15 @@
   background-color: white;
   z-index: 100;
   position: fixed;
+  width: 100%;
+  padding: 0 @outerPageMargin;
+
+  .navbar__left {
+    text-align: right;
+  }
+  .navbar__right {
+    text-align: left;
+  }
 
   .navbar__item {
     position: relative;
@@ -37,7 +47,7 @@
     }
 
     a {
-      &:hover {
+      &:hover, &.active {
         text-decoration: line-through;
         background-color: transparent;
         color: @saffronColor;
@@ -95,6 +105,12 @@
     .navbar__item__main {
       display: none;
     }
+  }
+}
+
+@media screen and (max-width: 768px) {
+  #sticky-logo {
+    display: none;
   }
 }
 

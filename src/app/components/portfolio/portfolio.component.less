@@ -18,6 +18,7 @@ section.portfolio {
       margin-bottom: 1em;
 
       .navbar__item {
+        white-space: nowrap;
         &:extend(.sansSerifFont);
         &:extend(.smallFont);
         &:extend(.normal);
@@ -114,6 +115,22 @@ section.portfolio {
           }
           .portfolio__item_hover {
             opacity: 1;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 768px) {
+  section.portfolio {
+    md-card.portfolio__card {
+      .navbar {
+        .navbar__item {
+          font-size: 10px;
+
+          a, span {
+            font-size: 10px;
           }
         }
       }

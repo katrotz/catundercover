@@ -11,9 +11,7 @@
   background: white;
   box-shadow: none;
   padding: 0;
-  display: flex;
-  align-items: center;
-  justify-content: flex-start;
+  display: block;
   max-width: @showcaseSize;
   margin-right: auto;
   margin-left: auto;
@@ -37,6 +35,7 @@
       display: flex;
       justify-content: flex-start;
       align-items: center;
+      margin-bottom: 32px;
 
       .screen__poster {
         width: @posterSize;
@@ -49,13 +48,22 @@
         margin-left: 3em;
         text-transform: uppercase;
 
+        .separator {
+          margin: 10px 0 20px 0;
+          width: 100px;
+
+          .circle {
+            margin-right: 10px;
+          }
+        }
+
         a {
           text-decoration: none;
           color: @mineShaftColor;
           text-transform: uppercase;
           font-size: 0.8rem;
 
-          &:hover {
+          &.view-project:hover {
             text-decoration: line-through;
             color: @saffronColor;
           }
@@ -96,6 +104,40 @@
         &.selected {
           background-color: @mineShaftColor;
           color: white;
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .portfolio-showcase {
+    .screen {
+      .screen__wrapper {
+        .screen__poster {
+          width: 100%;
+          -webkit-filter: opacity(20%);
+          -moz-filter: opacity(20%);
+          -o-filter: opacity(20%);
+          -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=20)";
+          filter: opacity(20%);
+        }
+
+        .screen__item {
+          position: absolute;
+          text-align: center;
+          width: 100%;
+          margin-left: 0;
+
+          .separator {
+            display: none;
+          }
+
+          a {
+            &.view-project:hover {
+              color: @mineShaftColor;
+            }
+          }
         }
       }
     }

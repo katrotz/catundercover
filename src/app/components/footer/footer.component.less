@@ -2,7 +2,7 @@
 
 footer {
   width: 100%;
-  margin: 0 auto;
+  margin: 15px auto;
   padding: 0 @outerPageMargin;
 
   .footer {
@@ -80,13 +80,16 @@ footer {
   }
 }
 
-@media only screen and (max-width: 1024px) {
-  footer {
-    .footer {
-      md-toolbar-row {
-        width: 95%;
-        margin: auto;
-      }
+@media screen and (max-width: 768px) {
+  .footer__social_item {
+    font-size: 15px;
+    width: 15px;
+    height: 15px;
+  }
+
+  .footer__contact {
+    a, span {
+      font-size: 10px;
     }
   }
 }

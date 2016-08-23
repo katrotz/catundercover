@@ -13,12 +13,13 @@ export default class CatUndercoverComponent{
             new Component({
                 selector: 'catundercover',
                 template: `
-                    <section class="hr hr--orange"></section>
+                    <section class="hr top"></section>
                     <navbar></navbar>
                     <div id="main" class="main">
                         <router-outlet></router-outlet>
                     </div>
                     <footer></footer>
+                    <section class="hr bottom"></section>
                 `,
                 styles: [componentStyles],
                 directives: [

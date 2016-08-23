@@ -13,11 +13,7 @@ Aliquam ullamcorper rhoncus ultricies. Vestibulum consectetur lectus tortor, non
 const dummyDetails = [
     {
         title: 'Home page',
-        image: '/assets/images/website-mockup.jpg'
-    },
-    {
-        title: 'Details page',
-        image: '/assets/images/website-mockup.jpg'
+        image: '/assets/images/Karlisch.jpg'
     }
 ];
 

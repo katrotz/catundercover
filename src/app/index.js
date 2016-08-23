@@ -1,6 +1,6 @@
 'use strict';
 
-import { Component, View, enableProdMode, ViewEncapsulation } from '@angular/core';
+import { NgModule, Component, View, enableProdMode, ViewEncapsulation } from '@angular/core';
 import { bootstrap as ngBootstrapBrowser } from '@angular/platform-browser-dynamic'
 import { provideStore } from '@ngrx/store';
 

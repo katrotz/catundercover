@@ -5,8 +5,15 @@
                 &nbsp;
             </div>
             <div class="screen__item">
-                <h1 class="title">{{item.title}}</h1>
-                <a [routerLink]="['/work', item.slug]">View Project</a>
+                <a [routerLink]="['work', item.slug]">
+                    <h1 class="title">{{item.title}}</h1>
+                </a>
+                <div class="separator">
+                    <span class="circle red"></span>
+                    <span class="circle yellow"></span>
+                    <span class="circle blue"></span>
+                </div>
+                <a [routerLink]="['work', item.slug]" class="view-project">View Project</a>
             </div>
         </div>
     </md-card>
