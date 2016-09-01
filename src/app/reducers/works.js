@@ -4,70 +4,19 @@ import _ from 'lodash';
 import Actions from './../actions/index';
 import { tagsState } from './tags';
 
-const dummyDescription = `
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc accumsan ligula nunc, pharetra imperdiet risus malesuada et. Nulla facilisi. Suspendisse tempus nisl tortor, at pharetra ligula bibendum eget. Vivamus vehicula non neque quis pulvinar. Donec a ultricies purus. Vivamus egestas lacinia lorem, eu dignissim magna mollis sit amet. Nullam interdum, sapien id sodales luctus, metus massa faucibus elit, in malesuada metus nisl in nisl. Vivamus ut porttitor ligula. Sed vestibulum mauris mauris, vel tristique metus dapibus vel. Aliquam rhoncus nulla ut turpis feugiat ultrices. In hac habitasse platea dictumst. Nullam venenatis nec libero et mollis. Cras lacus metus, cursus quis accumsan et, gravida vitae erat. Vestibulum pretium ante hendrerit lacus vestibulum, quis finibus mi condimentum.
-
-Aliquam ullamcorper rhoncus ultricies. Vestibulum consectetur lectus tortor, non sollicitudin orci gravida vitae. Ut sem sem, tristique quis mi sed, tristique tempor augue. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Duis sed est in ex commodo luctus et in libero. Maecenas a iaculis augue. Vestibulum sed porta mi, vel maximus felis. Suspendisse venenatis dolor magna, et vulputate velit sodales quis.
-`;
-
-const dummyDetails = [
-    {
-        title: 'Home page',
-        image: '/assets/images/Karlisch.jpg'
-    }
-];
+const dummyDescription = `Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc accumsan ligula nunc, pharetra imperdiet risus malesuada et. Nulla facilisi. Suspendisse tempus nisl tortor, at pharetra ligula bibendum eget. Vivamus vehicula non neque quis pulvinar. Donec a ultricies purus. Vivamus egestas lacinia lorem, eu dignissim magna mollis sit amet. Nullam interdum, sapien id sodales luctus, metus massa faucibus elit, in malesuada metus nisl in nisl. Vivamus ut porttitor ligula. Sed vestibulum mauris mauris, vel tristique metus dapibus vel. Aliquam rhoncus nulla ut turpis feugiat ultrices. In hac habitasse platea dictumst. Nullam venenatis nec libero et mollis. Cras lacus metus, cursus quis accumsan et, gravida vitae erat. Vestibulum pretium ante hendrerit lacus vestibulum, quis finibus mi condimentum.`;
 
 export const worksState = {
     filter: [_.cloneDeep(tagsState[0])],
     items: [
         {
-            title: 'Fatty Sundays',
-            description: dummyDescription,
-            slug: 'fatty-sundays',
-            client: 'Flosites',
-            year: '2015',
-            image: '/assets/images/poster-1.jpg',
-            details: dummyDetails,
-            tags: [
-                {
-                    title: 'Web Design',
-                    slug: 'web-design'
-                },
-                {
-                    title: 'App Design',
-                    slug: 'app-design'
-                }
-            ]
-
-        },
-        {
-            title: 'Anna Lucia Events',
-            description: dummyDescription,
-            slug: 'anna-lucia-events',
-            client: 'Flosites',
-            year: '2015',
-            details: dummyDetails,
-            image: '/assets/images/anna-lucia-events.png',
-            tags: [
-                {
-                    title: 'Web Design',
-                    slug: 'web-design'
-                },
-                {
-                    title: 'App Design',
-                    slug: 'app-design'
-                }
-            ]
-
-        },
-        {
             title: 'Air Moldova',
             description: dummyDescription,
             slug: 'air-moldova',
-            client: 'Flosites',
-            year: '2015',
-            details: dummyDetails,
-            image: '/assets/images/anna-lucia-events.png',
+            client: 'Air Moldova',
+            year: '2016',
+            image: '/assets/works/app/air-moldova-app-presentation.png',
+            detailsImage: '/assets/works/app/air-moldova-app-presentation.png',
             tags: [
                 {
                     title: 'App Design',
@@ -77,13 +26,13 @@ export const worksState = {
 
         },
         {
-            title: 'AsoEbiBella',
+            title: 'Little Foxes',
             description: dummyDescription,
-            slug: 'asoebibella',
-            client: 'Flosites',
-            year: '2015',
-            details: dummyDetails,
-            image: '/assets/images/anna-lucia-events.png',
+            slug: 'little-foxes',
+            client: 'Little Foxes',
+            year: '2016',
+            image: '/assets/works/illustration/illustration-little-foxes.jpg',
+            detailsImage: '/assets/works/illustration/illustration-little-foxes.jpg',
             tags: [
                 {
                     title: 'Illustrations',
@@ -93,74 +42,125 @@ export const worksState = {
 
         },
         {
-            title: 'YV',
+            title: 'Marigold and Grey',
             description: dummyDescription,
-            slug: 'yv',
-            client: 'Flosites',
-            year: '2015',
-            details: dummyDetails,
-            image: '/assets/images/anna-lucia-events.png',
+            slug: 'marigold-n-grey',
+            client: 'Marigold and Grey',
+            year: '2016',
+            image: '/assets/works/illustration/illustration-marigold-n-grey.png',
+            detailsImage: '/assets/works/illustration/illustration-marigold-n-grey.png',
             tags: [
                 {
-                    title: 'Web Design',
-                    slug: 'web-design'
-                },
-                {
-                    title: 'App Design',
-                    slug: 'app-design'
+                    title: 'Illustrations',
+                    slug: 'illustrations'
                 }
             ]
 
         },
         {
-            title: 'Vestidos',
+            title: 'Occasion Banner',
             description: dummyDescription,
-            slug: 'vestidos',
-            client: 'Flosites',
-            year: '2015',
-            details: dummyDetails,
-            image: '/assets/images/anna-lucia-events.png',
+            slug: 'occasion-banner',
+            client: 'Catundercover',
+            year: '2016',
+            image: '/assets/works/illustration/illustration-occasion-banners.png',
+            detailsImage: '/assets/works/illustration/illustration-occasion-banners.png',
             tags: [
                 {
-                    title: 'Web Design',
-                    slug: 'web-design'
-                },
-                {
-                    title: 'App Design',
-                    slug: 'app-design'
+                    title: 'Illustrations',
+                    slug: 'illustrations'
                 }
             ]
 
         },
         {
-            title: 'Collins Interiors',
+            title: 'Simply Beautiful',
             description: dummyDescription,
-            slug: 'collins-interiors',
-            client: 'Flosites',
-            year: '2015',
-            details: dummyDetails,
-            image: '/assets/images/anna-lucia-events.png',
+            slug: 'simply-beautiful',
+            client: 'Simply Beautiful',
+            year: '2016',
+            image: '/assets/works/illustration/illustration-simply-beautiful.jpg',
+            detailsImage: '/assets/works/illustration/illustration-simply-beautiful.jpg',
             tags: [
                 {
-                    title: 'Web Design',
-                    slug: 'web-design'
-                },
-                {
-                    title: 'App Design',
-                    slug: 'app-design'
+                    title: 'Illustrations',
+                    slug: 'illustrations'
                 }
             ]
 
         },
-
         {
-            title: 'Simply Beautiful Flowers and Gifts',
+            title: 'FS Presentation',
             description: dummyDescription,
-            client: 'Flosites',
-            year: '2015',
-            slug: 'simply-beautiful-flowers-and-gifts',
-            image: '/assets/images/anna-lucia-events.png',
-            details: dummyDetails,
+            slug: 'fs-presentation',
+            client: 'FS Presentation',
+            year: '2016',
+            image: '/assets/works/web/fs-presentation.jpg',
+            detailsImage: '/assets/works/web/fs-presentation.jpg',
+            tags: [
+                {
+                    title: 'Web Design',
+                    slug: 'web-design'
+                }
+            ]
+
+        },
+        {
+            title: 'Karlisch',
+            description: dummyDescription,
+            slug: 'karlisch',
+            client: 'Karlisch',
+            year: '2016',
+            image: '/assets/works/web/karlisch.jpg',
+            detailsImage: '/assets/works/web/karlisch.jpg',
+            tags: [
+                {
+                    title: 'Web Design',
+                    slug: 'web-design'
+                }
+            ]
+
+        },
+        {
+            title: 'Liz Lui',
+            description: dummyDescription,
+            slug: 'liz-lui-presentation',
+            client: 'Liz Lui',
+            year: '2016',
+            image: '/assets/works/web/liz-lui-presentation.jpg',
+            detailsImage: '/assets/works/web/liz-lui-presentation.jpg',
+            tags: [
+                {
+                    title: 'Web Design',
+                    slug: 'web-design'
+                }
+            ]
+
+        },
+        {
+            title: 'Simply Beautiful Presentation',
+            description: dummyDescription,
+            slug: 'simply-beautiful-presentation',
+            client: 'Simply Beautiful',
+            year: '2016',
+            image: '/assets/works/web/simply-beautiful-presentation.jpg',
+            detailsImage: '/assets/works/web/simply-beautiful-presentation.jpg',
+            tags: [
+                {
+                    title: 'Web Design',
+                    slug: 'web-design'
+                }
+            ]
+
+        },
+        {
+            title: 'Vitra Presentation',
+            description: dummyDescription,
+            slug: 'vitra-presentation',
+            client: 'Vitra Presentation',
+            year: '2016',
+            image: '/assets/works/web/vitra-presentation.jpg',
+            detailsImage: '/assets/works/web/vitra-presentation.jpg',
             tags: [
                 {
                     title: 'Web Design',

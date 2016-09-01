@@ -41,7 +41,9 @@
 
     <md-card class="work__details">
         <md-card-content>
-            <div class="showcase" *ngFor="let detail of work.details"><img [src]="detail.image" [title]="detail.title" class="showcase__image"/></div>
+            <div class="showcase">
+                <img [src]="work.detailsImage" class="showcase__image"/>
+            </div>
         </md-card-content>
     </md-card>
 </section>
