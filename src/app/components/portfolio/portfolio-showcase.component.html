@@ -5,7 +5,7 @@
                 &nbsp;
             </div>
             <div class="screen__item">
-                <a [routerLink]="[item.slug]">
+                <a [routerLink]="['/work', item.slug]">
                     <h1 class="title">{{item.title}}</h1>
                 </a>
                 <div class="separator">
@@ -13,7 +13,7 @@
                     <span class="circle yellow"></span>
                     <span class="circle blue"></span>
                 </div>
-                <a [routerLink]="[item.slug]" class="view-project">View Project</a>
+                <a [routerLink]="['/work', item.slug]" class="view-project">View Project</a>
             </div>
         </div>
     </md-card>
