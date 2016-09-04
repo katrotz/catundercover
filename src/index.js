@@ -2,7 +2,7 @@
     'use strict';
 
     Promise.all([
-        System.import('catundercover/app/index.js')
+        System.import('catundercover/index.js')
     ]).then(function(imports) {
             imports[0].run();
         })

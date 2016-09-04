@@ -2,10 +2,6 @@
 
 export const tagsState = [
     {
-        title: 'All projects',
-        slug: 'all'
-    },
-    {
         title: 'Web Design',
         slug: 'web-design'
     },
@@ -14,7 +10,7 @@ export const tagsState = [
         slug: 'app-design'
     },
     {
-        title: 'Illustrations',
+        title: 'Illustration',
         slug: 'illustrations'
     }
 ];

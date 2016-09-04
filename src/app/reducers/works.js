@@ -13,9 +13,9 @@ export const worksState = {
             title: 'Air Moldova',
             description: dummyDescription,
             slug: 'air-moldova',
-            client: 'Air Moldova',
-            year: '2016',
-            image: '/assets/works/app/air-moldova-app-presentation.png',
+            client: 'Floagency',
+            year: '2015',
+            image: '/assets/works/app/air-moldova-app-presentation-preview.png',
             detailsImage: '/assets/works/app/air-moldova-app-presentation.png',
             tags: [
                 {
@@ -29,9 +29,9 @@ export const worksState = {
             title: 'Little Foxes',
             description: dummyDescription,
             slug: 'little-foxes',
-            client: 'Little Foxes',
-            year: '2016',
-            image: '/assets/works/illustration/illustration-little-foxes.jpg',
+            client: 'Floagency',
+            year: '2014',
+            image: '/assets/works/illustration/illustration-little-foxes-preview.png',
             detailsImage: '/assets/works/illustration/illustration-little-foxes.jpg',
             tags: [
                 {
@@ -42,12 +42,12 @@ export const worksState = {
 
         },
         {
-            title: 'Marigold and Grey',
+            title: 'Marigold&Grey',
             description: dummyDescription,
             slug: 'marigold-n-grey',
-            client: 'Marigold and Grey',
-            year: '2016',
-            image: '/assets/works/illustration/illustration-marigold-n-grey.png',
+            client: 'Floagency',
+            year: '2015',
+            image: '/assets/works/illustration/illustration-marigold-n-grey-preview.png',
             detailsImage: '/assets/works/illustration/illustration-marigold-n-grey.png',
             tags: [
                 {
@@ -58,12 +58,12 @@ export const worksState = {
 
         },
         {
-            title: 'Occasion Banner',
+            title: 'Occasion Banners',
             description: dummyDescription,
             slug: 'occasion-banner',
-            client: 'Catundercover',
-            year: '2016',
-            image: '/assets/works/illustration/illustration-occasion-banners.png',
+            client: 'Floagency',
+            year: '',
+            image: '/assets/works/illustration/illustration-occasion-banners-preview.png',
             detailsImage: '/assets/works/illustration/illustration-occasion-banners.png',
             tags: [
                 {
@@ -74,12 +74,12 @@ export const worksState = {
 
         },
         {
-            title: 'Simply Beautiful',
+            title: 'Simply Beautiful Flowers',
             description: dummyDescription,
-            slug: 'simply-beautiful',
-            client: 'Simply Beautiful',
-            year: '2016',
-            image: '/assets/works/illustration/illustration-simply-beautiful.jpg',
+            slug: 'simply-beautiful-flowers-illustration',
+            client: 'Floagency',
+            year: '2015',
+            image: '/assets/works/illustration/illustration-simply-beautiful-preview.png',
             detailsImage: '/assets/works/illustration/illustration-simply-beautiful.jpg',
             tags: [
                 {
@@ -90,13 +90,13 @@ export const worksState = {
 
         },
         {
-            title: 'FS Presentation',
+            title: 'Fatty Sundays',
             description: dummyDescription,
-            slug: 'fs-presentation',
-            client: 'FS Presentation',
-            year: '2016',
-            image: '/assets/works/web/fs-presentation.jpg',
-            detailsImage: '/assets/works/web/fs-presentation.jpg',
+            slug: 'fatty-sundays',
+            client: 'Floagency',
+            year: '2015',
+            image: '/assets/works/web/fs-presentation-preview.png',
+            detailsImage: '/assets/works/web/fs-presentation.png',
             tags: [
                 {
                     title: 'Web Design',
@@ -106,12 +106,12 @@ export const worksState = {
 
         },
         {
-            title: 'Karlisch',
+            title: 'Karlisch Photography',
             description: dummyDescription,
-            slug: 'karlisch',
-            client: 'Karlisch',
-            year: '2016',
-            image: '/assets/works/web/karlisch.jpg',
+            slug: 'karlisch-photography',
+            client: 'Floagency',
+            year: '2015',
+            image: '/assets/works/web/karlisch-preview.png',
             detailsImage: '/assets/works/web/karlisch.jpg',
             tags: [
                 {
@@ -122,12 +122,12 @@ export const worksState = {
 
         },
         {
-            title: 'Liz Lui',
+            title: 'Liz Lui Photography',
             description: dummyDescription,
-            slug: 'liz-lui-presentation',
-            client: 'Liz Lui',
-            year: '2016',
-            image: '/assets/works/web/liz-lui-presentation.jpg',
+            slug: 'liz-lui-photography',
+            client: 'Floagency',
+            year: '2015',
+            image: '/assets/works/web/liz-lui-presentation-preview.png',
             detailsImage: '/assets/works/web/liz-lui-presentation.jpg',
             tags: [
                 {
@@ -138,12 +138,12 @@ export const worksState = {
 
         },
         {
-            title: 'Simply Beautiful Presentation',
+            title: 'Simply Beautiful Flowers',
             description: dummyDescription,
-            slug: 'simply-beautiful-presentation',
-            client: 'Simply Beautiful',
-            year: '2016',
-            image: '/assets/works/web/simply-beautiful-presentation.jpg',
+            slug: 'simply-beautiful-flowers-website',
+            client: 'Floagency',
+            year: '2015',
+            image: '/assets/works/web/simply-beautiful-presentation-preview.png',
             detailsImage: '/assets/works/web/simply-beautiful-presentation.jpg',
             tags: [
                 {
@@ -154,12 +154,12 @@ export const worksState = {
 
         },
         {
-            title: 'Vitra Presentation',
+            title: 'Vitra',
             description: dummyDescription,
-            slug: 'vitra-presentation',
-            client: 'Vitra Presentation',
-            year: '2016',
-            image: '/assets/works/web/vitra-presentation.jpg',
+            slug: 'vitra',
+            client: 'Pitch',
+            year: '2015',
+            image: '/assets/works/web/vitra-presentation-preview.png',
             detailsImage: '/assets/works/web/vitra-presentation.jpg',
             tags: [
                 {

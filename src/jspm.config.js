@@ -1,8 +1,12 @@
 SystemJS.config({
+  lessOptions: {
+    "append": false
+  },
   paths: {
     "npm:": "vendor/npm/",
     "github:": "vendor/github/",
-    "catundercover/": ""
+    "local:": "vendor/local/",
+    "catundercover/": "app/"
   },
   browserConfig: {
     "baseURL": "/"
@@ -15,7 +19,7 @@ SystemJS.config({
   transpiler: "plugin-babel",
   packages: {
     "catundercover": {
-      "main": "app/index.js",
+      "main": "index.js",
       "format": "esm",
       "meta": {
         "*.js": {
@@ -29,9 +33,6 @@ SystemJS.config({
         }
       }
     }
-  },
-  map: {
-    "npm:less": "npm:less@2.7.1"
   }
 });
 
@@ -39,15 +40,16 @@ SystemJS.config({
   packageConfigPaths: [
     "npm:@*/*.json",
     "npm:*.json",
-    "github:*/*.json"
+    "github:*/*.json",
+    "local:*.json"
   ],
   map: {
-    "less": "github:katrotz/systemjs-less-plugin@1.8.4",
     "clean-css": "npm:clean-css@3.4.19",
     "child_process": "github:jspm/nodelibs-child_process@0.2.0-alpha",
     "crypto": "github:jspm/nodelibs-crypto@0.2.0-alpha",
     "http": "github:jspm/nodelibs-http@0.2.0-alpha",
     "https": "github:jspm/nodelibs-https@0.2.0-alpha",
+    "less": "github:katrotz/systemjs-less-plugin@1.8.3",
     "module": "github:jspm/nodelibs-module@0.2.0-alpha",
     "@angular/router": "npm:@angular/router@3.0.0-rc.1",
     "@angular/http": "npm:@angular/http@2.0.0-rc.5",
@@ -67,7 +69,7 @@ SystemJS.config({
     "buffer": "github:jspm/nodelibs-buffer@0.2.0-alpha",
     "constants": "github:jspm/nodelibs-constants@0.2.0-alpha",
     "core-js": "npm:core-js@2.4.0",
-    "css": "github:systemjs/plugin-css@0.1.23",
+    "css": "github:systemjs/plugin-css@0.1.25",
     "domain": "github:jspm/nodelibs-domain@0.2.0-alpha",
     "errno": "npm:errno@0.1.4",
     "events": "github:jspm/nodelibs-events@0.2.0-alpha",

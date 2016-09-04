@@ -68,18 +68,22 @@ body {
     }
 
     .circle {
-      width: 0.3em;
-      height: 0.3em;
+      width: 0.2em;
+      height: 0.2em;
       display: inline-block;
-      -webkit-border-radius: 0.15em;
-      -moz-border-radius: 0.15em;
-      border-radius: 0.15em;
+      -webkit-border-radius: 0.1em;
+      -moz-border-radius: 0.1em;
+      border-radius: 0.1em;
     }
 
     md-card,
     [md-raised-button], [md-fab], [md-mini-fab], [md-button], [md-icon-button] {
       &:extend(.normalFont);
       &:extend(.sansSerifFont);
+    }
+
+    .clear {
+      clear: both;
     }
   }
 }

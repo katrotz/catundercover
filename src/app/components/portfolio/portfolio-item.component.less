@@ -31,9 +31,11 @@ portfolio-item {
         position: absolute;
 
         .side {
-          height: 4em;
+          height: 48px;
           width: 50%;
-          font-size: 0.6em;
+          font-size: 10.5px;
+          letter-spacing: 2px;
+          font-weight: 500;
           color: white;
           text-transform: uppercase;
           display: flex;
@@ -96,6 +98,8 @@ portfolio-item {
         display: flex;
         flex-direction: row;
         &:extend(.normalFont);
+        font-weight: normal;
+        font-size: 14px;
 
         .side {
           &.side__left {
@@ -110,9 +114,13 @@ portfolio-item {
             margin-left: 40%;
 
             .row {
+              margin-bottom: 10px;
               .title {
                 color: #A5A5A5;
                 text-transform: uppercase;
+                .sansSerifFont();
+                font-size: 10px;
+                letter-spacing: 2px;
               }
               .description {}
             }

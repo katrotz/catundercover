@@ -1,30 +1,46 @@
 <md-card class="portfolio-showcase">
-    <md-card class="screen" *ngIf="item">
-        <div class="screen__wrapper">
-            <div class="screen__poster" [style.background-image]="'url('+item.image+')'">
-                &nbsp;
-            </div>
-            <div class="screen__item">
-                <a [routerLink]="['/work', item.slug]">
-                    <h1 class="title">{{item.title}}</h1>
-                </a>
-                <div class="separator">
-                    <span class="circle red"></span>
-                    <span class="circle yellow"></span>
-                    <span class="circle blue"></span>
+    <div class="portfolio-showcase-wrapper">
+
+        <div class="showcase-column showcase-column-center">
+            <md-card class="screen" *ngIf="item">
+                <div class="screen__wrapper" [style.background-image]="'url('+item.image+')'">
+                    <div class="screen__item">
+                        <div class="inner">
+                            <a [routerLink]="['/work', item.slug]">
+                                <h1 class="title">{{item.title}}</h1>
+                            </a>
+                            <div class="separator">
+                                <span class="circle red"></span>
+                                <span class="circle yellow"></span>
+                                <span class="circle blue"></span>
+                            </div>
+                            <a [routerLink]="['/work', item.slug]" class="view-project">View Project</a>
+                        </div>
+                    </div>
                 </div>
-                <a [routerLink]="['/work', item.slug]" class="view-project">View Project</a>
-            </div>
+            </md-card>
+
+            <md-card class="navigation">
+                <div class="navigation__items">
+                    <a class="navigation__item"
+                       href="javascript:;"
+                       *ngFor="let item of items | async; let i = index;"
+                       [class.selected]="selected == i"
+                       (click)="select(i)"
+                    >{{formatIndex(i)}}</a>
+                </div>
+            </md-card>
         </div>
-    </md-card>
-    <md-card class="navigation">
-        <div class="navigation__items">
-            <a class="navigation__item"
-               href="javascript:;"
-               *ngFor="let item of items | async; let i = index;"
-               [class.selected]="selected == i"
-               (click)="select(i)"
-            >{{formatIndex(i)}}</a>
+
+
+        <div class="showcase-column showcase-column-left">
+            <a href="javascript:;" class="showcase-nav" (click)="selectPrev()"></a>
         </div>
-    </md-card>
+
+        <div class="showcase-column showcase-column-right">
+            <a href="javascript:;" class="showcase-nav" (click)="selectNext()"></a>
+        </div>
+
+        <div class="clear"></div>
+    </div>
 </md-card>

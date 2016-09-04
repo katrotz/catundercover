@@ -51,6 +51,16 @@ export default class PortfolioShowcaseComponent {
         this.item = this.items_[this.selected] || this.items_[0];
     }
 
+    selectPrev() {
+        this.selected = this.items_[this.selected - 1] ? this.selected - 1 : this.items_.length - 1;
+        this.item = this.items_[this.selected];
+    }
+
+    selectNext() {
+        this.selected = this.items_[this.selected + 1] ? this.selected + 1 : 0;
+        this.item = this.items_[this.selected];
+    }
+
     formatIndex(idx) {
         let output = String(idx + 1);
 
