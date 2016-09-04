@@ -49,7 +49,7 @@
       "core-js": "npm:core-js@^2.4.0",
       "css": "github:systemjs/plugin-css@^0.1.23",
       "json": "github:systemjs/plugin-json@^0.1.2",
-      "less": "github:katrotz/systemjs-less-plugin@1.8.3",
+      "less": "github:katrotz/systemjs-less-plugin@1.8.4",
       "lightbox2": "npm:lightbox2@^2.8.2",
       "lodash": "npm:lodash@^4.13.1",
       "text": "github:systemjs/plugin-text@^0.0.8"

@@ -49,7 +49,7 @@ SystemJS.config({
     "crypto": "github:jspm/nodelibs-crypto@0.2.0-alpha",
     "http": "github:jspm/nodelibs-http@0.2.0-alpha",
     "https": "github:jspm/nodelibs-https@0.2.0-alpha",
-    "less": "github:katrotz/systemjs-less-plugin@1.8.3",
+    "less": "github:katrotz/systemjs-less-plugin@1.8.4",
     "module": "github:jspm/nodelibs-module@0.2.0-alpha",
     "@angular/router": "npm:@angular/router@3.0.0-rc.1",
     "@angular/http": "npm:@angular/http@2.0.0-rc.5",
