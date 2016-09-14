@@ -1,0 +1,147 @@
+@import "./../../../../less/variables.less";
+
+@page-small-size: @pageSize - 128px;
+
+portfolio-item {
+  margin: 0;
+  padding: 0;
+  display: block;
+
+  section.work {
+
+    md-card {
+      &:extend(.sansFont);
+      &:extend(.largeFont);
+      font-weight: 200;
+    }
+
+    .work__navigation {
+      background-color: transparent;
+      padding: 0;
+      z-index: 300;
+
+      -moz-transition: height 0.5s ease;
+      -webkit-transition: height 0.5s ease;
+      -o-transition: height 0.5s ease;
+      transition: height 0.5s ease, width 0.5s ease, height 1s ease, opacity 0.5s;
+
+      md-toolbar-row {
+        left: 0;
+        width: 100%;
+        position: absolute;
+
+        .side {
+          height: 48px;
+          width: 50%;
+          font-size: 10.5px;
+          letter-spacing: 2px;
+          font-weight: 500;
+          color: white;
+          text-transform: uppercase;
+          display: flex;
+          flex-direction: row;
+          align-items: center;
+
+          .content {
+            width: @page-small-size/2;
+          }
+
+          a {
+            text-decoration: none;
+            display: inline-block;
+            color: white;
+
+            &:hover {
+
+            }
+          }
+        }
+        .side__left {
+          background-color: black;
+          justify-content: flex-end;
+
+          & > div {
+            text-align: left;
+            width: 100%;
+          }
+        }
+        .side__right {
+          background-color: #F3C444;
+          justify-content: flex-start;
+
+          & > div {
+            text-align: right;
+            width: 100%;
+          }
+        }
+      }
+
+      &.sticky {
+        position: fixed;
+        top: 2.4em;
+        left: 0;
+        margin: 0;
+        padding: 0;
+        z-index: 101;
+      }
+    }
+
+    .work__description {
+      width: @page-small-size;
+      margin: 3em auto auto auto;
+      box-shadow: none;
+      text-align: left;
+      color: #252525;
+      line-height: 1.5em;
+
+      md-card-content {
+        display: flex;
+        flex-direction: row;
+        &:extend(.normalFont);
+        font-weight: normal;
+        font-size: 14px;
+
+        .side {
+          &.side__left {
+            width: (9/16) * @page-small-size;
+          }
+
+          &.side__right {
+            width: (7/16) * @page-small-size;
+          }
+
+          .attributes {
+            margin-left: 40%;
+
+            .row {
+              margin-bottom: 10px;
+              .title {
+                color: #A5A5A5;
+                text-transform: uppercase;
+                .sansSerifFont();
+                font-size: 10px;
+                letter-spacing: 2px;
+              }
+              .description {}
+            }
+          }
+        }
+      }
+    }
+
+    .work__details {
+
+      box-shadow: none;
+
+      .showcase {
+        text-align: center;
+        margin: 2em auto auto auto;
+        max-width: @pageSize;
+
+        img.showcase__image {
+          width: 100%;
+        }
+      }
+    }
+  }
+}

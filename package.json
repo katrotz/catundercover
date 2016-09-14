@@ -26,7 +26,7 @@
   ],
   "license": "MIT",
   "devDependencies": {
-    "jspm": "^0.17.0-beta.22",
+    "jspm": "^0.17.0-beta.28",
     "live-server": "^1.0.0"
   },
   "dependencies": {},
@@ -38,13 +38,14 @@
       "packages": "src/vendor"
     },
     "dependencies": {
-      "@angular/http": "npm:@angular/http@^2.0.0-rc.5",
-      "@angular/router": "npm:@angular/router@^3.0.0-rc.1",
-      "@angular2-material/button": "npm:@angular2-material/button@^2.0.0-alpha.5-2",
-      "@angular2-material/card": "npm:@angular2-material/card@^2.0.0-alpha.5-2",
-      "@angular2-material/grid-list": "npm:@angular2-material/grid-list@^2.0.0-alpha.5-2",
-      "@angular2-material/toolbar": "npm:@angular2-material/toolbar@^2.0.0-alpha.5-2",
-      "@ngrx/store": "npm:@ngrx/store@^2.0.1",
+      "@angular/http": "npm:@angular/http@^2.0.0-rc.6",
+      "@angular/router": "npm:@angular/router@^3.0.0-rc.2",
+      "@angular2-material/button": "npm:@angular2-material/button@^2.0.0-alpha.8-1",
+      "@angular2-material/card": "npm:@angular2-material/card@^2.0.0-alpha.8-1",
+      "@angular2-material/grid-list": "npm:@angular2-material/grid-list@^2.0.0-alpha.8-1",
+      "@angular2-material/toolbar": "npm:@angular2-material/toolbar@^2.0.0-alpha.8-1",
+      "@ngrx/store": "npm:@ngrx/store@^2.1.2",
+      "angular2-masonry": "npm:angular2-masonry@^0.2.0",
       "clean-css": "npm:clean-css@^3.4.19",
       "core-js": "npm:core-js@^2.4.0",
       "css": "github:systemjs/plugin-css@^0.1.23",
@@ -58,13 +59,13 @@
       "plugin-babel": "npm:systemjs-plugin-babel@^0.0.12"
     },
     "peerDependencies": {
-      "@angular/common": "npm:@angular/common@^2.0.0-rc.1",
-      "@angular/compiler": "npm:@angular/compiler@^2.0.0-rc.5",
-      "@angular/core": "npm:@angular/core@^2.0.0-rc.1",
-      "@angular/platform-browser": "npm:@angular/platform-browser@^2.0.0-rc.5",
-      "@angular/platform-browser-dynamic": "npm:@angular/platform-browser-dynamic@^2.0.0-rc.5",
-      "@angular2-material/core": "npm:@angular2-material/core@^2.0.0-alpha.5-2",
-      "@ngrx/core": "npm:@ngrx/core@^1.0.0",
+      "@angular/common": "npm:@angular/common@^2.0.0-rc.6",
+      "@angular/compiler": "npm:@angular/compiler@^2.0.0-rc.6",
+      "@angular/core": "npm:@angular/core@^2.0.0-rc.6",
+      "@angular/platform-browser": "npm:@angular/platform-browser@^2.0.0-rc.6",
+      "@angular/platform-browser-dynamic": "npm:@angular/platform-browser-dynamic@^2.0.0-rc.6",
+      "@angular2-material/core": "npm:@angular2-material/core@2.0.0-alpha.8-1",
+      "@ngrx/core": "npm:@ngrx/core@^1.1.0",
       "assert": "github:jspm/nodelibs-assert@^0.2.0-alpha",
       "buffer": "github:jspm/nodelibs-buffer@^0.2.0-alpha",
       "child_process": "github:jspm/nodelibs-child_process@^0.2.0-alpha",
@@ -86,17 +87,18 @@
       "process": "github:jspm/nodelibs-process@^0.2.0-alpha",
       "promise": "npm:promise@^7.1.1",
       "reflect-metadata": "npm:reflect-metadata@^0.1.8",
-      "rxjs": "npm:rxjs@5.0.0-beta.6",
+      "rxjs": "npm:rxjs@5.0.0-beta.11",
       "source-map": "npm:source-map@^0.5.3",
       "stream": "github:jspm/nodelibs-stream@^0.2.0-alpha",
       "string_decoder": "github:jspm/nodelibs-string_decoder@^0.2.0-alpha",
+      "timers": "github:jspm/nodelibs-timers@^0.2.0-alpha",
       "url": "github:jspm/nodelibs-url@^0.2.0-alpha",
       "util": "github:jspm/nodelibs-util@^0.2.0-alpha",
       "vm": "github:jspm/nodelibs-vm@^0.2.0-alpha",
-      "zone.js": "npm:zone.js@^0.6.6"
+      "zone.js": "npm:zone.js@^0.6.17"
     },
     "overrides": {
-      "npm:@angular/common@2.0.0-rc.5": {
+      "npm:@angular/common@2.0.0-rc.6": {
         "meta": {
           "src/*.js": {
             "deps": [
@@ -106,7 +108,7 @@
           }
         }
       },
-      "npm:@angular/compiler@2.0.0-rc.5": {
+      "npm:@angular/compiler@2.0.0-rc.6": {
         "meta": {
           "src/*.js": {
             "deps": [
@@ -116,7 +118,7 @@
           }
         }
       },
-      "npm:@angular/core@2.0.0-rc.5": {
+      "npm:@angular/core@2.0.0-rc.6": {
         "meta": {
           "src/*.js": {
             "deps": [
@@ -126,7 +128,7 @@
           }
         }
       },
-      "npm:@angular/http@2.0.0-rc.5": {
+      "npm:@angular/http@2.0.0-rc.6": {
         "meta": {
           "src/*.js": {
             "deps": [
@@ -136,7 +138,7 @@
           }
         }
       },
-      "npm:@angular/platform-browser-dynamic@2.0.0-rc.5": {
+      "npm:@angular/platform-browser-dynamic@2.0.0-rc.6": {
         "meta": {
           "src/*.js": {
             "deps": [
@@ -146,7 +148,7 @@
           }
         }
       },
-      "npm:@angular/platform-browser@2.0.0-rc.5": {
+      "npm:@angular/platform-browser@2.0.0-rc.6": {
         "meta": {
           "src/*.js": {
             "deps": [
@@ -157,6 +159,11 @@
         }
       },
       "npm:inherits@2.0.1": {
+        "ignore": [
+          "test.js"
+        ]
+      },
+      "npm:inherits@2.0.3": {
         "ignore": [
           "test.js"
         ]

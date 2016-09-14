@@ -1,0 +1,140 @@
+@import "./../../../../less/variables.less";
+
+section.portfolio {
+  width: 100%;
+
+  md-card.portfolio__card {
+    background-color: #F9F9F9;
+    box-shadow: none;
+    padding-top: 1em;
+
+    .navbar {
+      align-items: center;
+      flex-direction: row;
+      flex-wrap: nowrap;
+      justify-content: center;
+      background-color: transparent;
+      margin-top: 1em;
+      margin-bottom: 1em;
+
+      .navbar__item {
+        white-space: nowrap;
+        &:extend(.sansSerifFont);
+        &:extend(.smallFont);
+        //&:extend(.normal);
+
+        a {
+          &:extend(.sansSerifFont);
+          &:extend(.smallFont);
+          //&:extend(.normal);
+          padding: 0 0.5rem;
+          letter-spacing: 2px;
+
+          &.selected, &:hover {
+            text-decoration: line-through;
+            background-color: transparent;
+            color: @saffronColor;
+          }
+        }
+      }
+    }
+
+    .portfolio__items {
+      background-color: transparent;
+      cursor: pointer;
+
+      .portfolio__item {
+        background-color: white;
+
+        a {
+          display: block;
+          width: 100%;
+          height: 100%;
+          position: relative;
+        }
+
+        .portfolio__item_normal {
+          opacity: 1;
+          position: absolute;
+          width: 100%;
+          height: 100%;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          flex-direction: column;
+          img {
+            width: 100%;
+          }
+        }
+
+        .portfolio__item_hover {
+          opacity: 0;
+          position: absolute;
+          transition:opacity 0.5s linear;
+          background-color: #F3C444;
+          width: 100%;
+          height: 100%;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          flex-direction: column;
+          color: white;
+
+          &:before {
+            content:'';
+            position: absolute;
+            left: 4%;
+            top: 4%;
+            width: 92%;
+            height: 92%;
+            border: 1px solid white;
+          }
+
+          .title {
+            transform: scale(1.2);
+            &:hover {
+              background-color: transparent;
+            }
+          }
+
+          .tags {
+            transform: scale(0.8);
+
+            &:hover {
+              background-color: transparent;
+            }
+
+            .tags__item {
+              margin-right: 5px;
+            }
+          }
+        }
+
+        &:hover {
+          .portfolio__item_normal {
+            opacity: 0;
+          }
+          .portfolio__item_hover {
+            opacity: 1;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 768px) {
+  section.portfolio {
+    md-card.portfolio__card {
+      .navbar {
+        .navbar__item {
+          font-size: 10px;
+
+          a, span {
+            font-size: 10px;
+          }
+        }
+      }
+    }
+  }
+}
