@@ -1,7 +1,7 @@
 'use strict';
 
 import { Component, ViewEncapsulation } from '@angular/core';
-import { Router } from '@angular/router';
+import { Router, NavigationStart, NavigationEnd } from '@angular/router';
 
 import componentStyles from './app.component.less!';
 
@@ -11,6 +11,9 @@ export default class AppComponent{
             new Component({
                 selector: 'app',
                 template: `
+                    <!--<div id="page-spinner" *ngIf="busy">-->
+                        <!--<spinner [delay]="500" [isRunning]="busy"></spinner>-->
+                    <!--</div>-->
                     <section class="hr top"></section>
                     <navbar></navbar>
                     <div id="main" class="main">
@@ -27,5 +30,35 @@ export default class AppComponent{
                 encapsulation: ViewEncapsulation.None
             })
         ];
+    }
+
+    static get parameters() {
+        return [
+            [Router]
+        ]
+    }
+
+    constructor(router) {
+        // this.busy = true;
+        // this.router = router;
+        //
+        // this.router.events.subscribe((event) => {
+        //     if (event instanceof NavigationStart) {
+        //         this.busy = true;
+        //     }
+        //     if (event instanceof NavigationEnd) {
+        //         setTimeout(() => {
+        //             this.busy = false;
+        //         }, 100);
+        //     }
+        // })
+    }
+
+    ngAfterViewInit() {
+        setTimeout(() => {
+            document.querySelector('#app-spinner-outer').style.display = 'none';
+        }, 500);
+
+        document.querySelector('app').style.visibility = 'visible';
     }
 }

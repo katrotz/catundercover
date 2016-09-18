@@ -11,6 +11,7 @@ import { RoutingModuleWithProviders, routingProviders } from './routes/index';
 import directives from './directives/index';
 import pipes from './pipes/index';
 import services from './services/index';
+import components from './components/index';
 
 const importedModulesList = [
     CommonAngularModule,
@@ -21,6 +22,7 @@ const importedModulesList = [
 ];
 
 const ownModulesList = [
+    ...components,
     ...directives,
     ...pipes
 ];

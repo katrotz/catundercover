@@ -1,4 +1,5 @@
 <section class="work">
+    <top></top>
     <md-toolbar class="work__navigation" [sticky] [stickyTopPx]="'64px'">
         <div class="side side__left">
             <div class="content">{{work.title}}</div>
@@ -40,9 +41,11 @@
     </md-card>
 
     <md-card class="work__details">
+        <!--<div class="arrow bounce" (click)="showDetailsImage(showcase, arrow)" #arrow></div>-->
         <md-card-content>
-            <div class="showcase">
-                <img [src]="work.detailsImage" class="showcase__image"/>
+            <div class="showcase" #showcase>
+                <spinner [isRunning]="!detailsImage" [delay]="100"></spinner>
+                <img [src]="detailsImage" *ngIf="detailsImage" class="showcase__image" [style.opacity]="detailsImageOpacity"/>
             </div>
         </md-card-content>
     </md-card>
