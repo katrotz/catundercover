@@ -18,7 +18,7 @@ export default class TopComponent {
                     componentStyles
                 ],
                 moduleId: __moduleName,
-                encapsulation: ViewEncapsulation.Native
+                encapsulation: ViewEncapsulation.Emulated
             })
         ];
     }
