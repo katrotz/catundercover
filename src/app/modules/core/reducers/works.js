@@ -19,6 +19,7 @@ export const worksState = {
             year: '2015',
             image: '/assets/works/app/air-moldova-app-presentation-preview.png',
             detailsImage: '/assets/works/app/air-moldova-app-presentation.png',
+            typeOfWork: ['App Design'],
             tags: [
                 {
                     title: 'App Design',
@@ -36,6 +37,7 @@ export const worksState = {
             year: '2014',
             image: '/assets/works/illustration/illustration-little-foxes-preview.png',
             detailsImage: '/assets/works/illustration/illustration-little-foxes.jpg',
+            typeOfWork: ['Illustration'],
             tags: [
                 {
                     title: 'Illustrations',
@@ -53,6 +55,7 @@ export const worksState = {
             year: '2015',
             image: '/assets/works/illustration/illustration-marigold-n-grey-preview.png',
             detailsImage: '/assets/works/illustration/illustration-marigold-n-grey.png',
+            typeOfWork: ['Illustration'],
             tags: [
                 {
                     title: 'Illustrations',
@@ -69,6 +72,7 @@ export const worksState = {
             year: '',
             image: '/assets/works/illustration/illustration-occasion-banners-preview.png',
             detailsImage: '/assets/works/illustration/illustration-occasion-banners.png',
+            typeOfWork: ['Illustration'],
             tags: [
                 {
                     title: 'Illustrations',
@@ -85,6 +89,7 @@ export const worksState = {
             year: '2015',
             image: '/assets/works/illustration/illustration-simply-beautiful-preview.png',
             detailsImage: '/assets/works/illustration/illustration-simply-beautiful.jpg',
+            typeOfWork: ['Illustration'],
             tags: [
                 {
                     title: 'Illustrations',
@@ -105,6 +110,7 @@ export const worksState = {
             year: '2015',
             image: '/assets/works/web/fs-presentation-preview.png',
             detailsImage: '/assets/works/web/fs-presentation.png',
+            typeOfWork: ['Web Design'],
             tags: [
                 {
                     title: 'Web Design',
@@ -122,6 +128,7 @@ export const worksState = {
             year: '2015',
             image: '/assets/works/web/karlisch-preview.png',
             detailsImage: '/assets/works/web/karlisch.jpg',
+            typeOfWork: ['Web Design'],
             tags: [
                 {
                     title: 'Web Design',
@@ -140,6 +147,7 @@ export const worksState = {
             year: '2015',
             image: '/assets/works/web/liz-lui-presentation-preview.png',
             detailsImage: '/assets/works/web/liz-lui-presentation.jpg',
+            typeOfWork: ['Web Design'],
             tags: [
                 {
                     title: 'Web Design',
@@ -159,6 +167,7 @@ export const worksState = {
             year: '2015',
             image: '/assets/works/web/simply-beautiful-presentation-preview.png',
             detailsImage: '/assets/works/web/simply-beautiful-presentation.jpg',
+            typeOfWork: ['Web Design', 'Illustration'],
             tags: [
                 {
                     title: 'Web Design',
@@ -176,6 +185,7 @@ export const worksState = {
             year: '2015',
             image: '/assets/works/web/vitra-presentation-preview.png',
             detailsImage: '/assets/works/web/vitra-presentation.jpg',
+            typeOfWork: ['Web Design'],
             tags: [
                 {
                     title: 'Web Design',
@@ -194,6 +204,7 @@ export const worksState = {
             year: '2015',
             image: '/assets/works/misc/tedx_presentation-preview.jpg',
             detailsImage: '/assets/works/misc/tedx_presentation.jpg',
+            typeOfWork: ['Print', 'Graphic Design'],
             tags: [
                 {
                     title: 'Misc',
