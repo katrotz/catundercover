@@ -25,51 +25,65 @@
       padding: 0 4em 0 4em;
       display: inline-block;
       font-size: 0.9em;
+      letter-spacing: 1.5px;
+      font-weight: 200;
+      .sansSerifFont();
     }
   }
 
   .moodboard__items {
     width: 100%;
-    position: relative;
+
+    &:after {
+      content: '';
+      display: block;
+      clear: both;
+    }
+
+    .moodboard__item__sizer, .moodboard__item {
+      width: 25%;
+    }
 
     .moodboard__item {
-      border-radius: 0.3em;
-      overflow: hidden;
+      float: left;
+      padding: 5px;
 
-      a.moodboard__item__image {
-        width: 100%;
-        height: 100%;
-        display: block;
-        background-size: cover;
-        background-repeat: no-repeat;
-        background-position: center;
+      .moodboard__item__image {
+        img {
+          border-radius: 0.4em;
+          display: block;
+          max-width: 100%;
+        }
       }
 
-      a.moodboard__item__audio {
+      .moodboard__item__audio {
         width: 100%;
         height: 100%;
         display: flex;
         align-items: center;
         justify-content: center;
         border: solid @saffronColor 1px;
-        border-radius: 0.3em;
+        border-radius: 0.4em;
         text-decoration: none;
 
-        div {
-          width: 90%;
+        figure {
+          width: 100%;
           font-size: 0.8em;
           line-height: 1.5em;
-          display: flex;
+          display: block;
+          margin: 25px 10px;
 
           .play {
-            display: inline-block;
+            display: block;
+            float: left;
             width: 3em;
             height: 3em;
             background-image: url('/assets/images/play-btn.png');
             background-size: cover;
           }
           .meta {
-            display: inline-block;
+            display: block;
+            float: left;
             color: @mineShaftColor;
             margin-left: 1em;
 
@@ -82,6 +96,16 @@
             }
           }
         }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .moodboard__item__audio {
+    figure {
+      .meta {
+        display: none !important;
       }
     }
   }

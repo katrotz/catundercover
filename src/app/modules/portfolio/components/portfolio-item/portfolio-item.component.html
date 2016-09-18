@@ -1,6 +1,6 @@
 <section class="work">
     <top></top>
-    <md-toolbar class="work__navigation" [sticky] [stickyTopPx]="'64px'">
+    <md-toolbar class="work__navigation" [sticky] [stickyTopPx]="stickyTopPx" [elementTopPx]="176" (stick)="onNavigationStick($event)">
         <div class="side side__left">
             <div class="content">{{work.title}}</div>
         </div>
@@ -19,10 +19,6 @@
             <div class="side side__right">
                 <div class="attributes">
                     <div class="row">
-                        <div class="title">Client</div>
-                        <div class="description">{{work.client}}</div>
-                    </div>
-                    <div class="row">
                         <div class="title">Type of work</div>
                         <div class="description">
                             <span *ngFor="let tag of work.tags">
@@ -31,7 +27,7 @@
                             </span>
                         </div>
                     </div>
-                    <div class="row">
+                    <div class="row" *ngIf="work.year">
                         <div class="title">Year</div>
                         <div class="description">{{work.year}}</div>
                     </div>
@@ -44,7 +40,6 @@
         <!--<div class="arrow bounce" (click)="showDetailsImage(showcase, arrow)" #arrow></div>-->
         <md-card-content>
             <div class="showcase" #showcase>
-                <spinner [isRunning]="!detailsImage" [delay]="100"></spinner>
                 <img [src]="detailsImage" *ngIf="detailsImage" class="showcase__image" [style.opacity]="detailsImageOpacity"/>
             </div>
         </md-card-content>

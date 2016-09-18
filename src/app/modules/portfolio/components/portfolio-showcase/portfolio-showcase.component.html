@@ -7,7 +7,8 @@
                     <div class="screen__item">
                         <div class="inner">
                             <a [routerLink]="['/work', item.slug]">
-                                <h1 class="title">{{item.title}}</h1>
+                                <h1 class="title" *ngIf="item.slug === 'tedx'">{{item.title}}</h1>
+                                <h1 class="title uppercase" *ngIf="item.slug !== 'tedx'">{{item.title}}</h1>
                             </a>
                             <div class="separator">
                                 <span class="circle red"></span>

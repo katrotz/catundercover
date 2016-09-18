@@ -100,11 +100,11 @@
             margin-top: (@posterHeight - @screenItemHeight) / 2;
             margin-left: @posterHeight - (@posterHeight - @screenItemHeight);
             background-color: white;
-            text-transform: uppercase;
             display: flex;
             align-items: center;
             justify-content: flex-start;
             flex-direction: row;
+            overflow-x: hidden;
 
             .inner {
               margin-left: 4em;
@@ -130,9 +130,12 @@
               a {
                 text-decoration: none;
                 color: @mineShaftColor;
-                text-transform: uppercase;
                 font-size: 0.7rem;
                 letter-spacing: 2px;
+
+                &.view-project {
+                  text-transform: uppercase;
+                }
 
                 &.view-project:hover {
                   text-decoration: line-through;
@@ -203,37 +206,24 @@
 }
 
 
-/*
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 1024px) {
   .portfolio-showcase {
     .screen {
       .screen__wrapper {
-        .screen__poster {
-          width: 100%;
-          -webkit-filter: opacity(20%);
-          -moz-filter: opacity(20%);
-          -o-filter: opacity(20%);
-          -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=20)";
-          filter: opacity(20%);
-        }
+
+        background-position: 0 0 !important;
 
         .screen__item {
-          position: absolute;
-          text-align: center;
-          width: 100%;
-          margin-left: 0;
+          //-webkit-filter: opacity(90%);
+          //-moz-filter: opacity(90%);
+          //-o-filter: opacity(90%);
+          //-ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=90)";
+          //filter: opacity(90%);
 
-          .separator {
-            display: none;
-          }
-
-          a {
-            &.view-project:hover {
-              color: @mineShaftColor;
-            }
-          }
+          margin: 0 !important;
+          height: 100% !important;
         }
       }
     }
   }
-}*/
+}

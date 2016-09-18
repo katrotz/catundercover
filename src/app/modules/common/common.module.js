@@ -4,7 +4,6 @@ import { NgModule } from '@angular/core';
 import { CommonModule as CommonAngularModule } from '@angular/common';
 import { MdCardModule } from '@angular2-material/card';
 import { MdToolbarModule } from '@angular2-material/toolbar';
-import { MdGridListModule } from '@angular2-material/grid-list';
 import { MdButtonModule } from '@angular2-material/button';
 
 import { RoutingModuleWithProviders, routingProviders } from './routes/index';
@@ -17,7 +16,6 @@ const importedModulesList = [
     CommonAngularModule,
     MdCardModule,
     MdToolbarModule,
-    MdGridListModule,
     MdButtonModule
 ];
 

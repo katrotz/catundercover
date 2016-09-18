@@ -12,6 +12,10 @@ export const tagsState = [
     {
         title: 'Illustration',
         slug: 'illustrations'
+    },
+    {
+        title: 'Misc',
+        slug: 'misc'
     }
 ];
 

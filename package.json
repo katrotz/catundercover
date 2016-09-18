@@ -49,6 +49,8 @@
       "clean-css": "npm:clean-css@^3.4.19",
       "core-js": "npm:core-js@^2.4.0",
       "css": "github:systemjs/plugin-css@^0.1.23",
+      "imagesloaded": "npm:imagesloaded@^4.1.1",
+      "isotope-layout": "npm:isotope-layout@^3.0.1",
       "json": "github:systemjs/plugin-json@^0.1.2",
       "less": "github:katrotz/systemjs-less-plugin@1.8.5",
       "lightbox2": "npm:lightbox2@^2.8.2",

@@ -183,6 +183,24 @@ export const worksState = {
                 }
             ]
 
+        },
+        {
+            title: 'TEDxChisinau:Crossroads',
+            description: `My experience with TEDxChisinau, started shortly after I got into the web design career and it was a great way to learn tons about this amazing event. I got the chance to be part of an experienced team and work on 2 different events during my time as a team member.
+                <br><br>I also got the chance to learn a lot about event design (from concept, to poster design, and designing print materials as well as working with the local printing companies), being the graphic designer for both of the events. One of the events I worked on as a team member is presented in a short showcase below.
+                <br><br>TEDxCrossroads was probably one of the most inspiring events I have been to in Chisinau, because I had the chance to see it both from the backstage and as a viewer. We had the chance to work with inspiring local and international speakers that achieved success in different fields. The theme of the event was to let them share their knowledge on how they overcame their fears and struggles when they were in a “real-life crossroads" and made that efficient before becoming who they were - a truly inspiring story I might say.`,
+            slug: 'tedx',
+            client: 'TEDxChisinau',
+            year: '2015',
+            image: '/assets/works/misc/tedx_presentation-preview.jpg',
+            detailsImage: '/assets/works/misc/tedx_presentation.jpg',
+            tags: [
+                {
+                    title: 'Misc',
+                    slug: 'misc'
+                }
+            ]
+
         }
     ]
 };

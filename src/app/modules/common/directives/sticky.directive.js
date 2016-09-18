@@ -1,6 +1,6 @@
 'use strict';
 
-import { Directive, ElementRef } from '@angular/core';
+import { Directive, ElementRef, EventEmitter } from '@angular/core';
 
 export default class StickyDirective {
     static get annotations() {
@@ -12,7 +12,11 @@ export default class StickyDirective {
                 },
                 moduleId: __moduleName,
                 inputs: [
-                    'stickyTopPx'
+                    'stickyTopPx',
+                    'elementTopPx'
+                ],
+                outputs: [
+                    'stick'
                 ]
             })
         ]
@@ -26,12 +30,18 @@ export default class StickyDirective {
 
     constructor(element) {
         this.element = element.nativeElement;
-        window.x = this.element;
+        this.stick = new EventEmitter();
     }
 
     ngOnInit() {
-        this.elementTopPx = this.element.getBoundingClientRect().top;
+        if (typeof this.elementTopPx === 'undefined') {
+            this.elementTopPx = this.element.getBoundingClientRect().top;
+        }
         this.stickyTopPx = parseFloat(this.stickyTopPx) || 0;
+
+        if (this.elementTopPx < this.stickyTopPx) {
+            this.elementTopPx = this.stickyTopPx;
+        }
     }
 
     onScroll() {
@@ -39,8 +49,10 @@ export default class StickyDirective {
 
         if (scrollTop >= (this.elementTopPx - this.stickyTopPx)) {
             this.element.classList.add('sticky');
+            this.stick.emit(true);
         } else {
             this.element.classList.remove('sticky');
+            this.stick.emit(false);
         }
     }
 

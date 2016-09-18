@@ -37,6 +37,7 @@ export default class MoodboardComponent {
             .subscribe(items => {
                 this.tiles = items;
             });
+        this.isIsotypeInit = false;
     }
 
     ngOnInit() {
@@ -50,5 +51,24 @@ export default class MoodboardComponent {
             window.removeEventListener('scroll', hideBanner);
         }
         window.addEventListener('scroll', hideBanner);
+    }
+
+    ngAfterViewInit() {
+        if (!this.isIsotypeInit) {
+            var grid = document.querySelector('.moodboard__items');
+            var iso = new window.Isotope(grid, {
+                itemSelector: '.moodboard__item',
+                percentPosition: true,
+                masonry: {
+                    columnWidth: '.moodboard__item__sizer'
+                }
+            });
+
+            window.imagesLoaded( grid ).on( 'progress', function() {
+                iso.layout();
+            });
+
+            this.isIsotypeInit = true;
+        }
     }
 }

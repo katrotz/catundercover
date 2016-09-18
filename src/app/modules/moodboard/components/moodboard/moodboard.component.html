@@ -6,19 +6,23 @@
         </span>
         </div>
 
-        <md-grid-list class="moodboard__items" cols="4" rowHeight="1:1" gutterSize="1em">
-            <md-grid-tile class="moodboard__item" *ngFor="let tile of tiles" [colspan]="tile.cols" [rowspan]="tile.rows">
-                <a [href]="tile.src" class="moodboard__item__image" [style.background-image]="'url(' + tile.src + ')'" *ngIf="tile.src" data-lightbox="tile.src"></a>
+        <div class="moodboard__items">
+            <top></top>
+            <div class="moodboard__item__sizer"></div>
+            <div class="moodboard__item"  *ngFor="let tile of tiles">
+                <a [href]="tile.src" class="moodboard__item__image" *ngIf="tile.src" data-lightbox="tile.src">
+                    <img src="{{tile.src}}"/>
+                </a>
                 <a [href]="tile.href" class="moodboard__item__audio" *ngIf="tile.href" target="_blank">
-                    <div>
+                    <figure>
                         <span class="play"></span>
                         <span class="meta">
-                        <span class="interpreter">{{tile.interpreter}}</span>
-                        <span class="title">"{{tile.title}}"</span>
-                    </span>
-                    </div>
+                            <span class="interpreter">{{tile.interpreter}}</span>
+                            <span class="title">"{{tile.title}}"</span>
+                        </span>
+                    </figure>
                 </a>
-            </md-grid-tile>
-        </md-grid-list>
+            </div>
+        </div>
     </div>
 </section>

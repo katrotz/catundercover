@@ -1,6 +1,6 @@
 'use strict';
 
-import { Component, ViewEncapsulation, trigger, state, transition, animate, style, HostBinding } from '@angular/core';
+import { Component, ViewEncapsulation, ElementRef, trigger, state, transition, animate, style, HostBinding } from '@angular/core';
 import { Router, ActivatedRoute } from '@angular/router';
 import { Store } from '@ngrx/store';
 
@@ -57,7 +57,8 @@ export default class PortfolioItemComponent {
             [Store],
             [PortfolioService],
             [Router],
-            [ActivatedRoute]
+            [ActivatedRoute],
+            [ElementRef]
         ];
     }
 
@@ -81,6 +82,9 @@ export default class PortfolioItemComponent {
         this.id = null;
         this.work = null;
         this.detailsImage = null;
+        this.stickyTopPx = '64px';
+        this.isNavigationSticky = false;
+        this.element = element;
     }
 
     ngOnInit() {
@@ -88,9 +92,15 @@ export default class PortfolioItemComponent {
             this.id = params.id;
             this.work = this.portfolio.getWork(this.id);
             this.idx = this.portfolio.getWorkIndex(this.id);
+
+            if (!this.isNavigationSticky) {
+                this.scrollToTop();
+            } else {
+                this.scrollToTop(120);
+            }
+
             this.loadDetailImage();
         });
-
     }
 
     ngOnDestroy() {
@@ -132,10 +142,11 @@ export default class PortfolioItemComponent {
     showDetailsImage(showcase, arrow) {
         arrow.classList.remove('bounce');
 
-        const topScroll = showcase.getBoundingClientRect().top - 110;
-        const scrollDuration = 1000;
+        return this.scrollToTop();
+    }
 
-        let cosParameter = window.scrollY / 2;
+    scrollToTop(topScroll=0, scrollDuration=1000) {
+        let cosParameter = (window.scrollY - topScroll) / 2;
         let scrollCount = 0;
         let oldTimestamp = performance.now();
         function step (newTimestamp) {
@@ -143,13 +154,25 @@ export default class PortfolioItemComponent {
             if (scrollCount >= Math.PI) {
                 window.scrollTo(0, topScroll)
             }
-            if (window.scrollY === topScroll) {
+            if (window.scrollY <= topScroll) {
                 return
             }
-            window.scrollTo(0, Math.round(cosParameter - cosParameter * Math.cos(scrollCount)));
+            let newScrollTop = Math.round(cosParameter + cosParameter * Math.cos(scrollCount));
+
+            window.scrollTo(0, newScrollTop < topScroll ? topScroll : newScrollTop);
             oldTimestamp = newTimestamp;
             window.requestAnimationFrame(step);
         }
         window.requestAnimationFrame(step);
+
+        return this;
+    }
+
+    get isLoading() {
+        return !Boolean(this.detailsImage);
+    }
+
+    onNavigationStick(isNavigationSticky) {
+        this.isNavigationSticky = Boolean(isNavigationSticky);
     }
 }
