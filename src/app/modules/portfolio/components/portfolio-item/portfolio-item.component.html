@@ -40,8 +40,8 @@
         <!--<div class="arrow bounce" (click)="showDetailsImage(showcase, arrow)" #arrow></div>-->
         <md-card-content>
             <div class="showcase" #showcase>
-                <spinner [isRunning]="!detailsImage" [delay]="100"></spinner>
-                <img [src]="detailsImage" *ngIf="detailsImage" class="showcase__image" [style.opacity]="detailsImageOpacity"/>
+                <spinner [isRunning]="isLoading" [delay]="100"></spinner>
+                <img [src]="detailsImage" *ngIf="!isLoading" class="showcase__image" [style.opacity]="detailsImageOpacity"/>
             </div>
         </md-card-content>
     </md-card>
