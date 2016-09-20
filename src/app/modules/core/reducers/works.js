@@ -203,7 +203,7 @@ export const worksState = {
             client: 'TEDxChisinau',
             year: '2015',
             image: '/assets/works/misc/tedx_presentation-preview.jpg',
-            detailsImage: '/assets/works/misc/tedx_presentation.jpg',
+            detailsImage: '/assets/works/misc/tedx_presentation.png',
             typeOfWork: ['Print', 'Graphic Design'],
             tags: [
                 {
