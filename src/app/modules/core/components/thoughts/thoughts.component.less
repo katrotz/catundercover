@@ -1,0 +1,30 @@
+@import "./../../../../less/variables.less";
+
+.thoughts {
+  text-align: center;
+  margin-bottom: 100px;
+  .title {
+    letter-spacing: 2px;
+    .sansSerifFont();
+    font-weight: 200 !important;
+  }
+
+  .illustration {
+    img {
+      width: 300px;
+      height: 212px;
+    }
+  }
+
+  .actions {
+    a {
+      color: @saffronColor;
+      text-decoration: none;
+      font-size: 16px;
+
+      &:hover {
+        text-decoration: underline;
+      }
+    }
+  }
+}

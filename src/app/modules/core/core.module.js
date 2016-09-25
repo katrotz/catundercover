@@ -9,6 +9,7 @@ import { reducers, state } from './reducers/index';
 import { RoutingModuleWithProviders, routingProviders } from './routes/index';
 import FooterComponent from './components/footer/footer.component';
 import NavbarComponent from './components/navbar/navbar.component';
+import ThoughtsComponent from './components/thoughts/thoughts.component';
 import directives from './directives/index';
 import pipes from './pipes/index';
 import services from './services/index';
@@ -31,6 +32,7 @@ export default class CoreModule {
                 declarations: [
                     FooterComponent,
                     NavbarComponent,
+                    ThoughtsComponent,
                     ...pipes,
                     ...directives
                 ],
