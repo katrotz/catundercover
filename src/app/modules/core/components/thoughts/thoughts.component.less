@@ -2,7 +2,9 @@
 
 .thoughts {
   text-align: center;
-  margin-bottom: 100px;
+  margin-top: 55px;
+  margin-bottom: 150px;
+
   .title {
     letter-spacing: 2px;
     .sansSerifFont();
@@ -11,19 +13,24 @@
 
   .illustration {
     img {
-      width: 300px;
-      height: 212px;
+      width: 240px;
+      height: 169px;
     }
   }
 
   .actions {
+    margin-top: 40px;
     a {
       color: @saffronColor;
       text-decoration: none;
-      font-size: 16px;
+      font-size: 14px;
+      letter-spacing: 1.5px;
+      font-weight: 600;
 
       &:hover {
-        text-decoration: underline;
+        .line-through {
+          text-decoration: line-through;
+        }
       }
     }
   }
