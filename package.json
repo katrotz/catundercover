@@ -170,6 +170,12 @@
           "test.js"
         ]
       },
+      "npm:lodash@4.15.0": {
+        "map": {
+          "buffer": "@empty",
+          "process": "@empty"
+        }
+      },
       "npm:reflect-metadata@0.1.8": {
         "map": {
           "crypto": "@empty"
